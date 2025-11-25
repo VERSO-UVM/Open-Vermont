@@ -3,7 +3,7 @@ body { font-family: Arial, sans-serif; margin:0; padding:0; }
 nav { background-color:#2c3e50; padding:15px; }
 nav a { color:white; margin-right:15px; text-decoration:none; }
 nav a:first-child { font-weight:bold; font-size:20px; margin-right:20px; }
-.hero { background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3a/Vermont_fall_foliage.jpg'); height: 400px; background-size: cover; display:flex; align-items:center; justify-content:center; color:white; font-size:48px; font-weight:bold; text-shadow:2px 2px 4px #000; }
+.hero { background-image: url("img/hero.jpg"); height: 400px; background-size: cover; display:flex; align-items:center; justify-content:center; color:white; font-size:48px; font-weight:bold; text-shadow:2px 2px 4px #000; }
 .pillars { display:flex; justify-content:space-around; padding:40px; background:#ecf0f1; }
 .pillar { width:30%; text-align:center; font-size:20px; font-weight:bold; }
 .submit-btn { display:block; margin:20px auto; padding:15px 30px; background:#27ae60; color:white; font-size:18px; text-decoration:none; border-radius:5px; text-align:center; }
