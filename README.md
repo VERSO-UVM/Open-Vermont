@@ -61,11 +61,21 @@ Opportunities are tracked as GitHub Issues with the `opportunity` label.
 1. [Open a new issue](https://github.com/VERSO-UVM/Open-Vermont/issues/new) using the opportunity template
 2. Add the label **`opportunity`**
 3. Note the issue number GitHub assigns (shown in the URL as `/issues/N`)
-4. Edit `opportunities.html` and add a new `.problem` card, setting `data-issue="N"` to the issue number
+4. A maintainer reviews the submission (see criteria below) and, if approved, edits `opportunities.html` to add a new `.problem` card with `data-issue="N"`
 
 The page JavaScript will automatically fetch the 👍 reaction count from GitHub and display it as the vote total. Cards are re-sorted by vote count on page load.
 
 **Voting:** Any GitHub user can open the issue and click 👍 to vote. No extra infrastructure required.
+
+### Submission criteria
+
+Good opportunities:
+- Describe a real community challenge relevant to Vermonters
+- Identify existing resources — organizations, tools, or funding — already available to help address it
+- Are framed as challenges to solve collaboratively, not policy demands or partisan positions
+- Follow the [Code of Conduct](https://verso-uvm.github.io/Open-Vermont/#conduct)
+
+Maintainers aim to respond within 7 days. Submissions may be approved as-is, returned for edits, or declined with a brief explanation.
 
 ---
 
