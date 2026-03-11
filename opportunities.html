@@ -1,55 +1,94 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Opportunities - Open Vermont</title>
-    <link rel='stylesheet' href='styles.css'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opportunities — Open Vermont</title>
+  <meta name="description" content="Browse and vote on community opportunities submitted by Vermonters — from rural internet access to affordable housing.">
+  <meta property="og:title" content="Opportunities — Open Vermont">
+  <meta property="og:description" content="Vote on the issues that matter most to Vermonters, or submit your own.">
+  <meta property="og:image" content="img/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+
 <nav>
-    <a href="index.html">Open Vermont</a>
+  <a href="index.html" class="brand">Open Vermont</a>
+  <div class="nav-links">
     <a href="index.html">Home</a>
-    <a href="opportunities.html">Opportunities</a>
+    <a href="opportunities.html" class="active">Opportunities</a>
     <a href="discussions.html">Discussions</a>
     <a href="events.html">Events</a>
     <a href="resources.html">Resources</a>
     <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
-    <div class='container'>
-        <h1>Opportunities</h1>
-        
-    <div class='problem'>
-        <h2>Problem Statement: Improve Rural Internet Access</h2>
-        <p>Description: Many rural areas in Vermont lack reliable internet connectivity, impacting education and business.</p>
-        <p>Resources: State grants, local ISPs, community volunteers.</p>
-        <a href='#' class='vote-link'>Upvote this problem (23 votes)</a>
-        <div style='background:#ecf0f1; border-radius:5px; overflow:hidden; margin-top:10px;'>
-            <div style='width:100%; background:#27ae60; color:white; text-align:center; padding:5px 0;'>100%</div>
-        </div>
+<div class="page-header">
+  <h1>Community Opportunities</h1>
+  <p>Vote on the issues that matter most to Vermonters — or submit your own.</p>
+</div>
+
+<div class="container">
+
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px; flex-wrap:wrap; gap:12px;">
+    <div>
+      <div class="section-title">Open Opportunities</div>
+      <div class="section-subtitle">3 active opportunities — sorted by community votes</div>
     </div>
-    
-    <div class='problem'>
-        <h2>Problem Statement: Affordable Housing Solutions</h2>
-        <p>Description: Housing costs are rising, making it difficult for families to stay in Vermont.</p>
-        <p>Resources: Non-profit organizations, government programs, local builders.</p>
-        <a href='#' class='vote-link'>Upvote this problem (15 votes)</a>
-        <div style='background:#ecf0f1; border-radius:5px; overflow:hidden; margin-top:10px;'>
-            <div style='width:65%; background:#27ae60; color:white; text-align:center; padding:5px 0;'>65%</div>
-        </div>
+    <a href="https://github.com/VERSO-UVM/Open-Vermont/issues/new?template=opportunity.md&title=Opportunity%3A+&labels=opportunity" class="btn btn-primary">+ Submit Opportunity</a>
+  </div>
+
+  <div class="problem">
+    <span class="tag">Infrastructure</span>
+    <span class="tag">Rural</span>
+    <h2>Improve Rural Internet Access</h2>
+    <p class="meta-label">Problem</p>
+    <p>Many rural areas in Vermont lack reliable internet connectivity, impacting education, telehealth, and small business.</p>
+    <p class="meta-label" style="margin-top:10px;">Available Resources</p>
+    <p>State broadband grants, local ISPs, community volunteers, federal BEAD program funding.</p>
+    <a href="#" class="vote-link">&#9650; Upvote &nbsp;&middot;&nbsp; 23 votes</a>
+    <div class="vote-bar-wrap" style="margin-top:14px;">
+      <div class="vote-bar" style="width:100%;">100%</div>
     </div>
-    
-    <div class='problem'>
-        <h2>Problem Statement: Expand Makerspaces in Rural Areas</h2>
-        <p>Description: Rural communities lack access to collaborative maker environments for innovation and skill-building.</p>
-        <p>Resources: Local schools, libraries, community centers.</p>
-        <a href='#' class='vote-link'>Upvote this problem (8 votes)</a>
-        <div style='background:#ecf0f1; border-radius:5px; overflow:hidden; margin-top:10px;'>
-            <div style='width:34%; background:#27ae60; color:white; text-align:center; padding:5px 0;'>34%</div>
-        </div>
+  </div>
+
+  <div class="problem">
+    <span class="tag">Housing</span>
+    <span class="tag">Economy</span>
+    <h2>Affordable Housing Solutions</h2>
+    <p class="meta-label">Problem</p>
+    <p>Housing costs are rising, making it increasingly difficult for working families to remain in Vermont.</p>
+    <p class="meta-label" style="margin-top:10px;">Available Resources</p>
+    <p>Non-profit organizations, Vermont Housing Finance Agency, government programs, local builders.</p>
+    <a href="#" class="vote-link">&#9650; Upvote &nbsp;&middot;&nbsp; 15 votes</a>
+    <div class="vote-bar-wrap" style="margin-top:14px;">
+      <div class="vote-bar" style="width:65%;">65%</div>
     </div>
-    
+  </div>
+
+  <div class="problem">
+    <span class="tag">Makerspaces</span>
+    <span class="tag">Education</span>
+    <h2>Expand Makerspaces in Rural Areas</h2>
+    <p class="meta-label">Problem</p>
+    <p>Rural communities lack access to collaborative maker environments for hands-on innovation and skill-building.</p>
+    <p class="meta-label" style="margin-top:10px;">Available Resources</p>
+    <p>Local schools, public libraries, community centers, state innovation grants.</p>
+    <a href="#" class="vote-link">&#9650; Upvote &nbsp;&middot;&nbsp; 8 votes</a>
+    <div class="vote-bar-wrap" style="margin-top:14px;">
+      <div class="vote-bar" style="width:34%;">34%</div>
     </div>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-brand">Open Vermont</span>
+  Community-driven open source for Vermont &mdash; <a href="https://github.com/VERSO-UVM/Open-Vermont">GitHub</a>
+</footer>
+
 </body>
 </html>

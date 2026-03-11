@@ -1,51 +1,373 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Resources - Open Vermont</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources — Open Vermont</title>
+  <meta name="description" content="Local resources, makerspaces, libraries, and open source references for every Vermont county.">
+  <meta property="og:title" content="Resources — Open Vermont">
+  <meta property="og:description" content="Local resources, makerspaces, libraries, and open source references for every Vermont county.">
+  <meta property="og:image" content="img/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+
 <nav>
-    <a href="index.html">Open Vermont</a>
+  <a href="index.html" class="brand">Open Vermont</a>
+  <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="opportunities.html">Opportunities</a>
     <a href="discussions.html">Discussions</a>
     <a href="events.html">Events</a>
-    <a href="resources.html">Resources</a>
+    <a href="resources.html" class="active">Resources</a>
     <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
-    <div class="container">
-        <h1>Resources by County</h1>
-        <h2>Addison County</h2>
-        <div class="resource-item"><strong>Lawrence Memorial Library</strong> - 40 North St, Bristol, VT - <a href="http://www.lawrencelibrary.net">http://www.lawrencelibrary.net</a></div>
-        <div class="resource-item"><strong>University of Vermont Extension (Addison)</strong> - Middlebury, VT - <a href="https://www.uvm.edu">https://www.uvm.edu</a></div>
-        <div class="resource-item"><strong>Maker Space: Generator</strong> - Burlington (nearby) - <a href="https://generatorvt.com">https://generatorvt.com</a></div>
+<div class="page-header">
+  <h1>Resources</h1>
+  <p>Local organizations, makerspaces, and open source references across all 14 Vermont counties.</p>
+</div>
 
-        <h2>Open Source Topics</h2>
-        <h3>Open Source Licensing</h3>
-        <ul>
-            <li><a href="https://opensource.org/licenses">https://opensource.org/licenses</a></li>
-            <li><a href="https://choosealicense.com">https://choosealicense.com</a></li>
-            <li><a href="https://www.gnu.org/licenses/licenses.html">https://www.gnu.org/licenses/licenses.html</a></li>
-            <li><a href="https://tldrlegal.com">https://tldrlegal.com</a></li>
-        </ul>
-        <h3>Right to Repair</h3>
-        <ul>
-            <li><a href="https://www.ifixit.com/Right-to-Repair">https://www.ifixit.com/Right-to-Repair</a></li>
-            <li><a href="https://repair.org">https://repair.org</a></li>
-            <li><a href="https://www.eff.org/issues/right-to-repair">https://www.eff.org/issues/right-to-repair</a></li>
-            <li><a href="https://www.farmersrighttorepair.com">https://www.farmersrighttorepair.com</a></li>
-        </ul>
-        <h3>Open Source Practices</h3>
-        <ul>
-            <li><a href="https://opensource.guide">https://opensource.guide</a></li>
-            <li><a href="https://www.linuxfoundation.org">https://www.linuxfoundation.org</a></li>
-            <li><a href="https://www.apache.org/foundation/how-it-works.html">https://www.apache.org/foundation/how-it-works.html</a></li>
-            <li><a href="https://www.redhat.com/en/open-source">https://www.redhat.com/en/open-source</a></li>
-        </ul>
+<div class="container">
+
+  <!-- County Quick Nav -->
+  <div style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius-md); padding:16px 20px; margin-bottom:36px; box-shadow:var(--shadow-sm);">
+    <p style="font-size:.8rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--slate); margin-bottom:10px;">Jump to County</p>
+    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+      <a href="#addison" class="tag" style="text-decoration:none;">Addison</a>
+      <a href="#bennington" class="tag" style="text-decoration:none;">Bennington</a>
+      <a href="#caledonia" class="tag" style="text-decoration:none;">Caledonia</a>
+      <a href="#chittenden" class="tag" style="text-decoration:none;">Chittenden</a>
+      <a href="#essex" class="tag" style="text-decoration:none;">Essex</a>
+      <a href="#franklin" class="tag" style="text-decoration:none;">Franklin</a>
+      <a href="#grand-isle" class="tag" style="text-decoration:none;">Grand Isle</a>
+      <a href="#lamoille" class="tag" style="text-decoration:none;">Lamoille</a>
+      <a href="#orange" class="tag" style="text-decoration:none;">Orange</a>
+      <a href="#orleans" class="tag" style="text-decoration:none;">Orleans</a>
+      <a href="#rutland" class="tag" style="text-decoration:none;">Rutland</a>
+      <a href="#washington" class="tag" style="text-decoration:none;">Washington</a>
+      <a href="#windham" class="tag" style="text-decoration:none;">Windham</a>
+      <a href="#windsor" class="tag" style="text-decoration:none;">Windsor</a>
     </div>
+  </div>
+
+  <!-- ===== COUNTIES ===== -->
+  <div class="resource-section" id="addison">
+    <h2>Addison County</h2>
+    <div class="resource-item">
+      <strong>Lawrence Memorial Library</strong> &mdash; 40 North St, Bristol, VT<br>
+      <a href="http://www.lawrencelibrary.net">lawrencelibrary.net</a>
+    </div>
+    <div class="resource-item">
+      <strong>Ilsley Public Library</strong> &mdash; 75 Main St, Middlebury, VT<br>
+      <a href="https://www.ilsleylibrary.org">ilsleylibrary.org</a>
+    </div>
+    <div class="resource-item">
+      <strong>UVM Extension — Addison County</strong> &mdash; Middlebury, VT<br>
+      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    </div>
+    <div class="resource-item">
+      <strong>Generator Makerspace</strong> &mdash; Burlington, VT (serves Addison County)<br>
+      <a href="https://generatorvt.com">generatorvt.com</a>
+    </div>
+  </div>
+
+  <div class="resource-section" id="bennington">
+    <h2>Bennington County</h2>
+    <div class="resource-item">
+      <strong>Bennington Free Library</strong> &mdash; 101 Silver St, Bennington, VT<br>
+      <a href="https://www.benningtonfreelibrary.org">benningtonfreelibrary.org</a>
+    </div>
+    <div class="resource-item">
+      <strong>Martha Canfield Library</strong> &mdash; Russell Sage Highway, Arlington, VT<br>
+      <a href="https://marthacanfieldlibrary.org">marthacanfieldlibrary.org</a>
+    </div>
+    <div class="resource-item">
+      <strong>UVM Extension — Bennington County</strong> &mdash; Bennington, VT<br>
+      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    </div>
+    <div class="resource-item">
+      <strong>Southern Vermont Arts Center</strong> &mdash; 930 SVAC Dr, Manchester, VT (hosts workshops)<br>
+      <a href="https://svac.org">svac.org</a>
+    </div>
+  </div>
+
+  <div class="resource-section" id="caledonia">
+    <h2>Caledonia County</h2>
+    <div class="resource-item">
+      <strong>Fairbanks Museum &amp; Planetarium</strong> &mdash; 1302 Main St, St. Johnsbury, VT (STEM programs)<br>
+      <a href="https://fairbanksmuseum.org">fairbanksmuseum.org</a>
+    </div>
+    <div class="resource-item">
+      <strong>St. Johnsbury Athenaeum</strong> &mdash; 1171 Main St, St. Johnsbury, VT<br>
+      <a href="https://www.stjathenaeum.org">stjathenaeum.org</a>
+    </div>
+    <div class="resource-item">
+      <strong>UVM Extension — Caledonia County</strong> &mdash; St. Johnsbury, VT<br>
+      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    </div>
+    <div class="resource-item">
+      <strong>Northeastern Vermont Regional Hospital Community Programs</strong> &mdash; St. Johnsbury, VT<br>
+      <a href="https://www.nvrh.org">nvrh.org</a>
+    </div>
+  </div>
+
+  <div class="resource-section" id="chittenden">
+    <h2>Chittenden County</h2>
+    <div class="resource-item">
+      <strong>Generator Makerspace</strong> &mdash; 40 Sears Ln, Burlington, VT (Vermont's largest makerspace)<br>
+      <a href="https://generatorvt.com">generatorvt.com</a>
+    </div>
+    <div class="resource-item">
+      <strong>Fletcher Free Library</strong> &mdash; 235 College St, Burlington, VT<br>
+      <a href="https://www.fletcherfree.org">fletcherfree.org</a>
+    </div>
+    <div class="resource-item">
+      <strong>University of Vermont — Innovation Hub</strong> &mdash; Burlington, VT<br>
+      <a href="https://www.uvm.edu">uvm.edu</a>
+    </div>
+    <div class="resource-item">
+      <strong>Champlain College — Emergent Media Center</strong> &mdash; Burlington, VT<br>
+      <a href="https://www.champlain.edu/emc">champlain.edu/emc</a>
+    </div>
+    <div class="resource-item">
+      <strong>Vermont Technology Alliance</strong> &mdash; Burlington, VT<br>
+      <a href="https://www.vermonttechnology.com">vermonttechnology.com</a>
+    </div>
+  </div>
+
+  <div class="resource-section" id="essex">
+    <h2>Essex County</h2>
+    <div class="resource-item">
+      <strong>North Country Library</strong> &mdash; Island Pond, VT<br>
+      <a href="https://libraries.vermont.gov">libraries.vermont.gov</a>
+    </div>
+    <div class="resource-item">
+      <strong>UVM Extension — Essex County</strong> &mdash; St. Johnsbury (serves Essex County)<br>
+      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    </div>
+    <div class="resource-item">
+      <strong>Kingdom Community Wind / NEK Energy Coalition</strong> &mdash; Northeast Kingdom renewable energy community organizing<br>
+      <a href="https://nekedc.com">nekedc.com</a>
+    </div>
+  </div>
+
+  <div class="resource-section" id="franklin">
+    <h2>Franklin County</h2>
+    <div class="resource-item">
+      <strong>St. Albans Free Library</strong> &mdash; 11 Maiden Ln, St. Albans, VT<br>
+      <a href="https://www.stalbansfreelibrary.org">stalbansfreelibrary.org</a>
+    </div>
+    <div class="resource-item">
+      <strong>Northwestern Vermont Community Action</strong> &mdash; St. Albans, VT<br>
+      <a href="https://nwvca.org">nwvca.org</a>
+    </div>
+    <div class="resource-item">
+      <strong>UVM Extension — Franklin &amp; Grand Isle Counties</strong> &mdash; St. Albans, VT<br>
+      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    </div>
+  </div>
+
+  <div class="resource-section" id="grand-isle">
+    <h2>Grand Isle County</h2>
+    <div class="resource-item">
+      <strong>Folsom Educational &amp; Community Center Library</strong> &mdash; South Hero, VT<br>
+      <a href="https://libraries.vermont.gov">libraries.vermont.gov</a>
+    </div>
+    <div class="resource-item">
+      <strong>UVM Extension — Franklin &amp; Grand Isle Counties</strong> &mdash; St. Albans, VT<br>
+      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    </div>
+    <div class="resource-item">
+      <strong>Lake Champlain Islands Chamber of Commerce</strong> &mdash; South Hero, VT<br>
+      <a href="https://champlainislands.com">champlainislands.com</a>
+    </div>
+  </div>
+
+  <div class="resource-section" id="lamoille">
+    <h2>Lamoille County</h2>
+    <div class="resource-item">
+      <strong>Morristown Centennial Library</strong> &mdash; 88 Lower Main St, Morrisville, VT<br>
+      <a href="https://morristownlibrary.org">morristownlibrary.org</a>
+    </div>
+    <div class="resource-item">
+      <strong>Sterling College</strong> &mdash; Craftsbury Common, VT (sustainability-focused programs)<br>
+      <a href="https://sterlingcollege.edu">sterlingcollege.edu</a>
+    </div>
+    <div class="resource-item">
+      <strong>UVM Extension — Lamoille County</strong> &mdash; Morrisville, VT<br>
+      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    </div>
+  </div>
+
+  <div class="resource-section" id="orange">
+    <h2>Orange County</h2>
+    <div class="resource-item">
+      <strong>Royalton Memorial Library</strong> &mdash; S. Royalton, VT<br>
+      <a href="https://libraries.vermont.gov">libraries.vermont.gov</a>
+    </div>
+    <div class="resource-item">
+      <strong>Vermont Law and Graduate School</strong> &mdash; 164 Chelsea St, South Royalton, VT<br>
+      <a href="https://www.vermontlaw.edu">vermontlaw.edu</a>
+    </div>
+    <div class="resource-item">
+      <strong>UVM Extension — Orange County</strong> &mdash; Randolph, VT<br>
+      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    </div>
+    <div class="resource-item">
+      <strong>Vermont Technical College</strong> &mdash; 124 Admin Dr, Randolph Center, VT<br>
+      <a href="https://www.vtc.edu">vtc.edu</a>
+    </div>
+  </div>
+
+  <div class="resource-section" id="orleans">
+    <h2>Orleans County</h2>
+    <div class="resource-item">
+      <strong>Derby Public Library</strong> &mdash; Derby, VT<br>
+      <a href="https://libraries.vermont.gov">libraries.vermont.gov</a>
+    </div>
+    <div class="resource-item">
+      <strong>UVM Extension — Orleans County</strong> &mdash; Newport, VT<br>
+      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    </div>
+    <div class="resource-item">
+      <strong>NEK Council on Aging</strong> &mdash; Newport, VT (technology access programs)<br>
+      <a href="https://nekcouncil.org">nekcouncil.org</a>
+    </div>
+  </div>
+
+  <div class="resource-section" id="rutland">
+    <h2>Rutland County</h2>
+    <div class="resource-item">
+      <strong>Rutland Free Library</strong> &mdash; 10 Court St, Rutland, VT<br>
+      <a href="https://rutlandfree.org">rutlandfree.org</a>
+    </div>
+    <div class="resource-item">
+      <strong>Vermont Makers</strong> &mdash; Rutland area community making network<br>
+      <a href="https://vermontmakers.org">vermontmakers.org</a>
+    </div>
+    <div class="resource-item">
+      <strong>College of St. Joseph / Community College of Vermont — Rutland</strong> &mdash; Rutland, VT<br>
+      <a href="https://ccv.edu">ccv.edu</a>
+    </div>
+    <div class="resource-item">
+      <strong>UVM Extension — Rutland County</strong> &mdash; Rutland, VT<br>
+      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    </div>
+  </div>
+
+  <div class="resource-section" id="washington">
+    <h2>Washington County</h2>
+    <div class="resource-item">
+      <strong>Kellogg-Hubbard Library</strong> &mdash; 135 Main St, Montpelier, VT<br>
+      <a href="https://www.kellogghubbard.org">kellogghubbard.org</a>
+    </div>
+    <div class="resource-item">
+      <strong>Capital City Makerspace</strong> &mdash; Montpelier, VT<br>
+      <a href="https://www.capitalcitymakerspace.com">capitalcitymakerspace.com</a>
+    </div>
+    <div class="resource-item">
+      <strong>Vermont Agency of Digital Services</strong> &mdash; Montpelier, VT (state open data &amp; tech policy)<br>
+      <a href="https://digitalservices.vermont.gov">digitalservices.vermont.gov</a>
+    </div>
+    <div class="resource-item">
+      <strong>Vermont Open Source Alliance</strong> &mdash; Montpelier, VT<br>
+      <a href="https://vtosa.org">vtosa.org</a>
+    </div>
+    <div class="resource-item">
+      <strong>UVM Extension — Washington County</strong> &mdash; Montpelier, VT<br>
+      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    </div>
+  </div>
+
+  <div class="resource-section" id="windham">
+    <h2>Windham County</h2>
+    <div class="resource-item">
+      <strong>Brooks Memorial Library</strong> &mdash; 224 Main St, Brattleboro, VT<br>
+      <a href="https://brookslibraryvt.org">brookslibraryvt.org</a>
+    </div>
+    <div class="resource-item">
+      <strong>Windham &amp; Windsor Housing Trust</strong> &mdash; Brattleboro, VT<br>
+      <a href="https://www.wwhtrust.org">wwhrust.org</a>
+    </div>
+    <div class="resource-item">
+      <strong>Brattleboro Development Credit Corporation</strong> &mdash; Brattleboro, VT (small business &amp; tech)<br>
+      <a href="https://bdcc.com">bdcc.com</a>
+    </div>
+    <div class="resource-item">
+      <strong>UVM Extension — Windham County</strong> &mdash; Brattleboro, VT<br>
+      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    </div>
+  </div>
+
+  <div class="resource-section" id="windsor">
+    <h2>Windsor County</h2>
+    <div class="resource-item">
+      <strong>Windsor Public Library</strong> &mdash; 43 State St, Windsor, VT<br>
+      <a href="https://www.windsorvtlibrary.org">windsorvtlibrary.org</a>
+    </div>
+    <div class="resource-item">
+      <strong>Upper Valley Makerspace (UVMAKE)</strong> &mdash; White River Junction, VT<br>
+      <a href="https://uvmake.org">uvmake.org</a>
+    </div>
+    <div class="resource-item">
+      <strong>Vermont Center for Emerging Technologies</strong> &mdash; White River Junction, VT<br>
+      <a href="https://vcet.co">vcet.co</a>
+    </div>
+    <div class="resource-item">
+      <strong>UVM Extension — Windsor County</strong> &mdash; White River Junction, VT<br>
+      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ===== OPEN SOURCE TOPICS ===== -->
+  <div class="resource-section">
+    <h2>Open Source Topics</h2>
+
+    <h3>Open Source Licensing</h3>
+    <ul class="resource-links">
+      <li><a href="https://opensource.org/licenses">opensource.org/licenses</a></li>
+      <li><a href="https://choosealicense.com">choosealicense.com</a></li>
+      <li><a href="https://www.gnu.org/licenses/licenses.html">gnu.org — Licenses</a></li>
+      <li><a href="https://tldrlegal.com">tldrlegal.com</a></li>
+    </ul>
+
+    <h3>Right to Repair</h3>
+    <ul class="resource-links">
+      <li><a href="https://www.ifixit.com/Right-to-Repair">iFixit — Right to Repair</a></li>
+      <li><a href="https://repair.org">repair.org</a></li>
+      <li><a href="https://www.eff.org/issues/right-to-repair">EFF — Right to Repair</a></li>
+      <li><a href="https://www.farmersrighttorepair.com">farmersrighttorepair.com</a></li>
+    </ul>
+
+    <h3>Open Source Practices</h3>
+    <ul class="resource-links">
+      <li><a href="https://opensource.guide">opensource.guide</a></li>
+      <li><a href="https://www.linuxfoundation.org">Linux Foundation</a></li>
+      <li><a href="https://www.apache.org/foundation/how-it-works.html">Apache Foundation</a></li>
+      <li><a href="https://www.redhat.com/en/open-source">Red Hat Open Source</a></li>
+    </ul>
+
+    <h3>Open Data &amp; Civic Tech</h3>
+    <ul class="resource-links">
+      <li><a href="https://geodata.vermont.gov">Vermont Open Geodata</a></li>
+      <li><a href="https://data.vermont.gov">data.vermont.gov</a></li>
+      <li><a href="https://codeforamerica.org">Code for America</a></li>
+      <li><a href="https://github.com/VERSO-UVM">VERSO-UVM GitHub</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-brand">Open Vermont</span>
+  Community-driven open source for Vermont &mdash; <a href="https://github.com/VERSO-UVM/Open-Vermont">GitHub</a>
+</footer>
+
 </body>
 </html>

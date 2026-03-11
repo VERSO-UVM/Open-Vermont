@@ -1,28 +1,98 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Events - Open Vermont</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events — Open Vermont</title>
+  <meta name="description" content="Upcoming Vermont community events — craft and skillshares, open makerspace hours, maker meetups, and hackathons.">
+  <meta property="og:title" content="Events — Open Vermont">
+  <meta property="og:description" content="In-person gatherings, open hours, and community meetups across Vermont.">
+  <meta property="og:image" content="img/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+
 <nav>
-    <a href="index.html">Open Vermont</a>
+  <a href="index.html" class="brand">Open Vermont</a>
+  <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="opportunities.html">Opportunities</a>
     <a href="discussions.html">Discussions</a>
-    <a href="events.html">Events</a>
+    <a href="events.html" class="active">Events</a>
     <a href="resources.html">Resources</a>
     <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
-    <div class="container">
-        <h1>Upcoming Events</h1>
-        <div class="event"><strong>Craft and Skillshare</strong> - Nov 30, Burlington Odd Fellows Hall</div>
-        <div class="event"><strong>Laboratory B Open Hours</strong> - Every Thursday, 7pm-9pm, 12-22 North Street, Burlington</div>
-        <div class="event"><strong>Maker Meetup</strong> - Dec 10, Vermont Tech Center, Randolph</div>
-        <div class="event"><strong>Open Hardware Hackathon</strong> - Jan 15, Champlain College, Burlington</div>
+<div class="page-header">
+  <h1>Upcoming Events</h1>
+  <p>In-person gatherings, open hours, and community meetups across Vermont.</p>
+</div>
+
+<div class="container">
+
+  <div class="section-title" style="margin-bottom:24px;">Events Calendar</div>
+
+  <div class="event">
+    <div class="event-date-badge">
+      <div class="month">Nov</div>
+      <div class="day">30</div>
     </div>
+    <div class="event-body">
+      <h3>Craft and Skillshare</h3>
+      <p>&#128205; Burlington Odd Fellows Hall &mdash; Burlington, VT</p>
+      <p>A community gathering to share skills, trades, and crafts. All are welcome.</p>
+    </div>
+  </div>
+
+  <div class="event">
+    <div class="event-date-badge" style="background:var(--green-mid);">
+      <div class="month">Weekly</div>
+      <div class="day" style="font-size:1rem; padding-top:4px;">Thu</div>
+    </div>
+    <div class="event-body">
+      <h3>Laboratory B Open Hours</h3>
+      <p>&#128205; 12-22 North Street &mdash; Burlington, VT</p>
+      <p>Drop-in open hours every Thursday, 7&ndash;9 pm. Community makerspace and workshop time.</p>
+    </div>
+  </div>
+
+  <div class="event">
+    <div class="event-date-badge">
+      <div class="month">Dec</div>
+      <div class="day">10</div>
+    </div>
+    <div class="event-body">
+      <h3>Maker Meetup</h3>
+      <p>&#128205; Vermont Tech Center &mdash; Randolph, VT</p>
+      <p>Monthly meetup for makers, tinkerers, and open hardware enthusiasts.</p>
+    </div>
+  </div>
+
+  <div class="event">
+    <div class="event-date-badge">
+      <div class="month">Jan</div>
+      <div class="day">15</div>
+    </div>
+    <div class="event-body">
+      <h3>Open Hardware Hackathon</h3>
+      <p>&#128205; Champlain College &mdash; Burlington, VT</p>
+      <p>A full-day hackathon focused on open hardware projects for Vermont communities. Teams welcome.</p>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:36px;">
+    <a href="contact.html?subject=event" class="btn btn-primary">Submit an Event</a>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-brand">Open Vermont</span>
+  Community-driven open source for Vermont &mdash; <a href="https://github.com/VERSO-UVM/Open-Vermont">GitHub</a>
+</footer>
+
 </body>
 </html>

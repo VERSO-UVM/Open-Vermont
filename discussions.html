@@ -1,25 +1,121 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Discussions - Open Vermont</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discussions — Open Vermont</title>
+  <meta name="description" content="Join community discussions on right to repair, open source licensing, makerspaces, and Vermont open hardware.">
+  <meta property="og:title" content="Discussions — Open Vermont">
+  <meta property="og:description" content="Join the conversation on open source, right to repair, and local Vermont issues.">
+  <meta property="og:image" content="img/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+
 <nav>
-    <a href="index.html">Open Vermont</a>
+  <a href="index.html" class="brand">Open Vermont</a>
+  <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="opportunities.html">Opportunities</a>
-    <a href="discussions.html">Discussions</a>
+    <a href="discussions.html" class="active">Discussions</a>
     <a href="events.html">Events</a>
     <a href="resources.html">Resources</a>
     <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
-    <div class="container">
-        <h1>Community Discussions</h1>
-        <div class='discussion-thread'><h3>Right to Repair</h3><p>I think Vermont should adopt stronger right-to-repair laws.</p><p>Agreed! Farmers need access to repair manuals.</p></div><div class='discussion-thread'><h3>Open Source Licensing</h3><p>Which license is best for community projects?</p><p>GPL vs MIT is always a debate.</p></div><div class='discussion-thread'><h3>Makerspaces</h3><p>We need more rural makerspaces.</p><p>Could libraries host maker events?</p></div><div class='discussion-thread'><h3>Open Hardware</h3><p>Anyone working on open hardware for farming?</p><p>Yes, check out OpenAg projects.</p></div>
+<div class="page-header">
+  <h1>Community Discussions</h1>
+  <p>Join the conversation on open source, right to repair, and local issues.</p>
+</div>
+
+<div class="container">
+
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px; flex-wrap:wrap; gap:12px;">
+    <div class="section-subtitle" style="margin:0;">4 active threads</div>
+    <a href="https://github.com/VERSO-UVM/Open-Vermont/discussions/new" class="btn btn-primary">+ Start a Thread</a>
+  </div>
+
+  <div class="discussion-thread">
+    <h3>&#128296; Right to Repair</h3>
+    <div class="message">
+      <div class="avatar">AK</div>
+      <div class="message-body">
+        <div class="author">Alex K.</div>
+        <p>I think Vermont should adopt stronger right-to-repair laws. Other states are moving forward — we should lead.</p>
+      </div>
     </div>
+    <div class="message">
+      <div class="avatar" style="background:var(--gold);">MF</div>
+      <div class="message-body">
+        <div class="author">Marie F.</div>
+        <p>Agreed! Farmers especially need access to repair manuals and diagnostic tools. John Deere's restrictions are hurting small farms.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="discussion-thread">
+    <h3>&#128196; Open Source Licensing</h3>
+    <div class="message">
+      <div class="avatar">JR</div>
+      <div class="message-body">
+        <div class="author">Jordan R.</div>
+        <p>Which license is best for community projects that want to stay open? GPL vs MIT is always a debate.</p>
+      </div>
+    </div>
+    <div class="message">
+      <div class="avatar" style="background:var(--navy);">SP</div>
+      <div class="message-body">
+        <div class="author">Sam P.</div>
+        <p>MIT is simpler and more permissive. GPL ensures derivatives stay open. Depends on your goals — choosealicense.com is a great starting point.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="discussion-thread">
+    <h3>&#128736; Makerspaces</h3>
+    <div class="message">
+      <div class="avatar">TL</div>
+      <div class="message-body">
+        <div class="author">Taylor L.</div>
+        <p>We need more rural makerspaces. Burlington has Generator, but what about the Northeast Kingdom?</p>
+      </div>
+    </div>
+    <div class="message">
+      <div class="avatar" style="background:var(--gold);">CW</div>
+      <div class="message-body">
+        <div class="author">Casey W.</div>
+        <p>Could libraries host maker events and tool libraries? They already have community trust and physical locations.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="discussion-thread">
+    <h3>&#9881; Open Hardware for Farming</h3>
+    <div class="message">
+      <div class="avatar">RM</div>
+      <div class="message-body">
+        <div class="author">Robin M.</div>
+        <p>Anyone working on open hardware projects specifically for Vermont farmers? Soil sensors, irrigation controls, etc.?</p>
+      </div>
+    </div>
+    <div class="message">
+      <div class="avatar" style="background:var(--green-mid);">DH</div>
+      <div class="message-body">
+        <div class="author">Dana H.</div>
+        <p>Yes — check out the OpenAg and FarmHack projects. Would love to adapt some of those designs locally with Vermont-specific conditions.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-brand">Open Vermont</span>
+  Community-driven open source for Vermont &mdash; <a href="https://github.com/VERSO-UVM/Open-Vermont">GitHub</a>
+</footer>
+
 </body>
 </html>

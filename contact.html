@@ -1,11 +1,174 @@
-<!DOCTYPE html><html><head><title>Contact</title><link rel='stylesheet' href='styles.css'></head><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Open Vermont</title>
+  <meta name="description" content="Get in touch with the Open Vermont community or submit an opportunity, event, or resource suggestion.">
+  <meta property="og:title" content="Contact — Open Vermont">
+  <meta property="og:description" content="Get in touch with the Open Vermont community.">
+  <meta property="og:image" content="img/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block;
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      font-family: var(--font-sans);
+      font-size: .95rem;
+      color: var(--navy);
+      background: var(--white);
+      transition: border-color .15s, box-shadow .15s;
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--green-mid);
+      box-shadow: 0 0 0 3px rgba(45,122,79,.15);
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-note {
+      font-size: .8rem;
+      color: var(--slate);
+      margin-top: 4px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 540px) { .form-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
 <nav>
-    <a href="index.html">Open Vermont</a>
+  <a href="index.html" class="brand">Open Vermont</a>
+  <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="opportunities.html">Opportunities</a>
     <a href="discussions.html">Discussions</a>
     <a href="events.html">Events</a>
     <a href="resources.html">Resources</a>
-    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
 </nav>
-<h1 style='padding:20px;'>Contact Us Coming Soon</h1></body></html>
+
+<div class="page-header">
+  <h1>Get In Touch</h1>
+  <p>Questions, ideas, event submissions, or resource suggestions — we want to hear from you.</p>
+</div>
+
+<div class="container">
+
+  <div style="display:grid; grid-template-columns:1fr 340px; gap:40px; align-items:start;">
+
+    <!-- Contact Form -->
+    <div>
+      <div class="section-title" style="margin-bottom:6px;">Send a Message</div>
+      <p class="section-subtitle">We'll get back to you as soon as possible.</p>
+
+      <!-- Replace YOUR_FORM_ID with your Formspree form ID, or use Netlify Forms / similar -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="">Select a topic...</option>
+            <option value="opportunity">Submit an Opportunity</option>
+            <option value="event">Submit an Event</option>
+            <option value="resource">Suggest a Resource</option>
+            <option value="general">General Question</option>
+            <option value="collaboration">Collaboration / Partnership</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="county">Your County <span style="font-weight:400; color:var(--slate);">(optional)</span></label>
+          <select id="county" name="county">
+            <option value="">Select your county...</option>
+            <option>Addison</option>
+            <option>Bennington</option>
+            <option>Caledonia</option>
+            <option>Chittenden</option>
+            <option>Essex</option>
+            <option>Franklin</option>
+            <option>Grand Isle</option>
+            <option>Lamoille</option>
+            <option>Orange</option>
+            <option>Orleans</option>
+            <option>Rutland</option>
+            <option>Washington</option>
+            <option>Windham</option>
+            <option>Windsor</option>
+            <option>Outside Vermont</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+          <p class="form-note">For opportunity submissions, describe the problem, the community it affects, and any resources that could help.</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+        <p class="form-note" style="text-align:center; margin-top:12px;">
+          Prefer GitHub? <a href="https://github.com/VERSO-UVM/Open-Vermont/issues/new">Open an issue directly</a>.
+        </p>
+
+      </form>
+    </div>
+
+    <!-- Sidebar -->
+    <div>
+      <div style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius-lg); padding:24px; box-shadow:var(--shadow-sm); margin-bottom:20px;">
+        <h3 style="font-size:1rem; margin-bottom:12px; color:var(--green-dark);">Other Ways to Connect</h3>
+        <p style="font-size:.9rem; color:var(--slate); margin-bottom:16px;">Open Vermont is built in the open. The fastest way to engage is through GitHub.</p>
+        <a href="https://github.com/VERSO-UVM/Open-Vermont" class="btn btn-primary" style="display:block; width:100%; text-align:center; margin-bottom:10px;">GitHub Repository</a>
+        <a href="https://github.com/VERSO-UVM/Open-Vermont/issues/new" class="btn btn-outline" style="display:block; width:100%; text-align:center; color:var(--green-mid); border-color:var(--green-mid);">Open an Issue</a>
+      </div>
+
+      <div style="background:var(--green-pale); border:1px solid rgba(45,122,79,.2); border-radius:var(--radius-lg); padding:24px;">
+        <h3 style="font-size:1rem; margin-bottom:8px; color:var(--green-dark);">Submit an Opportunity</h3>
+        <p style="font-size:.88rem; color:var(--slate); margin-bottom:16px;">Have a community problem worth solving? Submit it so Vermonters can vote and rally around it.</p>
+        <a href="opportunities.html" class="btn btn-primary" style="display:block; width:100%; text-align:center;">View Opportunities</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-brand">Open Vermont</span>
+  Community-driven open source for Vermont &mdash; <a href="https://github.com/VERSO-UVM/Open-Vermont">GitHub</a>
+</footer>
+
+</body>
+</html>
