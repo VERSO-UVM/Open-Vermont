@@ -27,14 +27,31 @@
 
 <div class="page-header">
   <h1>Resources</h1>
-  <p>Local organizations, makerspaces, and open source references across all 14 Vermont counties.</p>
+  <p>Libraries, makerspaces, and open source references across all 14 Vermont counties.</p>
 </div>
 
 <div class="container">
 
+  <div class="notice">
+    This directory is community-maintained. For the complete official list of Vermont public libraries, see the <a href="https://libraries.vermont.gov/find-vermont-libraries" target="_blank" rel="noopener">Vermont Department of Libraries directory</a>. Hours vary by season — check each organization's website. To add or correct a listing, <a href="https://github.com/VERSO-UVM/Open-Vermont/issues/new">open an issue on GitHub</a>.
+  </div>
+
+  <div class="resource-filters">
+    <span class="filter-label">Filter</span>
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="library">Libraries</button>
+    <button class="filter-btn" data-filter="makerspace">Makerspaces</button>
+    <span class="filter-count" id="filter-count"></span>
+    <div class="resource-search-wrap">
+      <span class="resource-search-icon">&#128269;</span>
+      <input class="resource-search" id="resource-search" type="search" placeholder="Search by name or location&hellip;" autocomplete="off">
+    </div>
+  </div>
+
   <div class="county-nav">
-    <p>Jump to County</p>
+    <p>Jump to</p>
     <div class="county-nav-links">
+      <a href="#makerspaces">Makerspaces</a>
       <a href="#addison">Addison</a>
       <a href="#bennington">Bennington</a>
       <a href="#caledonia">Caledonia</a>
@@ -49,314 +66,1209 @@
       <a href="#washington">Washington</a>
       <a href="#windham">Windham</a>
       <a href="#windsor">Windsor</a>
+      <a href="#open-source">Open Source</a>
     </div>
   </div>
 
-  <!-- ===== COUNTIES ===== -->
+  <!-- ===== MAKERSPACES ===== -->
+  <div class="resource-section" id="makerspaces">
+    <h2>Makerspaces &amp; Hackerspaces</h2>
+    <p style="color:var(--slate); font-size:.92rem; margin-bottom:20px;">Community workshops, fab labs, and maker spaces open to the public across Vermont. Membership requirements and open hours vary — see each organization's website.</p>
+
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">Generator</h3>
+        <p class="resource-card-desc">Vermont's largest community makerspace — 12,000 sq ft with dedicated shops for woodworking, metalworking, machining, electronics, sewing, jewelry, and rapid prototyping. Membership-based with drop-in access.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> 40 Sears Ln, Burlington</div>
+          <div class="resource-meta-row"><span class="meta-label">County</span> Chittenden</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://generatorvt.com" target="_blank" rel="noopener">generatorvt.com</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--hackerspace">Hackerspace</span>
+        <h3 class="resource-card-name">Laboratory B</h3>
+        <p class="resource-card-desc">Cooperative nonprofit hackerspace and Vermont's entry in the global Hackerspaces network. Community-run space for electronics, software, and hands-on tinkering.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Burlington</div>
+          <div class="resource-meta-row"><span class="meta-label">County</span> Chittenden</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://laboratoryb.org" target="_blank" rel="noopener">laboratoryb.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--fablab">Fab Lab</span>
+        <h3 class="resource-card-name">UVM FabLab</h3>
+        <p class="resource-card-desc">University-affiliated digital fabrication lab with laser cutters, 3D printers, CNC equipment, and electronics tools. Open to UVM students, faculty, and community partners.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Burlington</div>
+          <div class="resource-meta-row"><span class="meta-label">County</span> Chittenden</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://uvmfablab.net" target="_blank" rel="noopener">uvmfablab.net</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">Champlain College Maker Program</h3>
+        <p class="resource-card-desc">Campus makerspace offering workshops, open studio time, and community events. Focused on prototyping, fabrication, and interdisciplinary making.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Burlington</div>
+          <div class="resource-meta-row"><span class="meta-label">County</span> Chittenden</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://www.champlain.edu/office/maker-program" target="_blank" rel="noopener">champlain.edu/office/maker-program</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">The Makery at Hannaford Career Center</h3>
+        <p class="resource-card-desc">Community makerspace with 3D printing, building trades tools, and sewing equipment. Membership-based, with a focus on hands-on skill building for all ages.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Middlebury</div>
+          <div class="resource-meta-row"><span class="meta-label">County</span> Addison</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://makeryatpahcc.org" target="_blank" rel="noopener">makeryatpahcc.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">Bennington Area Makers (BAM)</h3>
+        <p class="resource-card-desc">Community makerspace with 3D printers, computers, sewing equipment, and robotics. Open to makers of all skill levels in the Bennington area.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Bennington</div>
+          <div class="resource-meta-row"><span class="meta-label">County</span> Bennington</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://bamvt.com" target="_blank" rel="noopener">bamvt.com</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">The Foundry</h3>
+        <p class="resource-card-desc">10,000 sq ft community makerspace serving the Northeast Kingdom, with 3D printing, CNC routing, laser cutting, and general fabrication tools. A major resource for rural makers.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Lyndonville</div>
+          <div class="resource-meta-row"><span class="meta-label">County</span> Caledonia</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://thefoundryvt.org" target="_blank" rel="noopener">thefoundryvt.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">MakerSphere</h3>
+        <p class="resource-card-desc">Makerspace and arts studio with clay, ceramics, woodworking, stained glass, and cooking facilities. Offers classes, open studio time, and community workshops.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Waterbury Center</div>
+          <div class="resource-meta-row"><span class="meta-label">County</span> Washington</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://makerspherevt.com" target="_blank" rel="noopener">makerspherevt.com</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">The MINT</h3>
+        <p class="resource-card-desc">Community makerspace in downtown Rutland with a laser cutter, wood shop, jewelry lab, metal shop, and stained glass studio. Membership and day passes available.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Rutland</div>
+          <div class="resource-meta-row"><span class="meta-label">County</span> Rutland</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://rutlandmint.org" target="_blank" rel="noopener">rutlandmint.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">Newport Community Maker Space</h3>
+        <p class="resource-card-desc">Makerspace, tool library, and business incubator serving the Northeast Kingdom. Offers equipment access, workspace, and entrepreneurship support for the region.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Newport</div>
+          <div class="resource-meta-row"><span class="meta-label">County</span> Orleans</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://ncmsvt.org" target="_blank" rel="noopener">ncmsvt.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">Spark (WonderArts / Rural Arts VT)</h3>
+        <p class="resource-card-desc">Rural arts-focused makerspace with graphic design computers, 3D printers, and a laser cutter. Part of the WonderArts initiative to bring creative tools to Vermont's rural Northeast Kingdom.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Greensboro</div>
+          <div class="resource-meta-row"><span class="meta-label">County</span> Orleans</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://ruralartsvt.org" target="_blank" rel="noopener">ruralartsvt.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">HatchSpace</h3>
+        <p class="resource-card-desc">Woodworking school and community workshop in Brattleboro, with CNC routing, laser cutting, and 3D printing alongside traditional hand and power tools. Classes and membership available.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Brattleboro</div>
+          <div class="resource-meta-row"><span class="meta-label">County</span> Windham</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://hatchspace.org" target="_blank" rel="noopener">hatchspace.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">Upper Valley MakerSpace</h3>
+        <p class="resource-card-desc">Makerspace, artist studio, and business incubator in White River Junction, serving the Vermont-New Hampshire Upper Valley region. Workspace and equipment access for makers and entrepreneurs.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> White River Junction</div>
+          <div class="resource-meta-row"><span class="meta-label">County</span> Windsor</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://uppervalleymakerspace.org" target="_blank" rel="noopener">uppervalleymakerspace.org</a></div>
+        </div>
+      </div>
+
+    </div><!-- /.resource-grid -->
+  </div>
+
+  <hr class="divider">
+
+  <!-- ===== ADDISON ===== -->
   <div class="resource-section" id="addison">
-    <h2>Addison County</h2>
-    <div class="resource-item">
-      <strong>Lawrence Memorial Library</strong> &mdash; 40 North St, Bristol, VT<br>
-      <a href="http://www.lawrencelibrary.net">lawrencelibrary.net</a>
+    <h2>Addison County — Libraries</h2>
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Ilsley Public Library</h3>
+        <p class="resource-card-desc">Middlebury's main public library, serving Addison County with collections, digital resources, community programming, and meeting space.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Middlebury</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://ilsleypubliclibrary.org" target="_blank" rel="noopener">ilsleypubliclibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Bixby Memorial Library</h3>
+        <p class="resource-card-desc">Public library serving Vergennes and surrounding communities with books, digital resources, and local history collections.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Vergennes</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://bixbylibrary.org" target="_blank" rel="noopener">bixbylibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Lawrence Memorial Library</h3>
+        <p class="resource-card-desc">Public library serving Bristol and surrounding communities with books, programs, and community services.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Bristol</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://lawrencelibraryvt.org" target="_blank" rel="noopener">lawrencelibraryvt.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Platt Memorial Library</h3>
+        <p class="resource-card-desc">Public library serving Shoreham and surrounding communities on the shores of Lake Champlain.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Shoreham</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://plattlib.org" target="_blank" rel="noopener">plattlib.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Russell Memorial Library</h3>
+        <p class="resource-card-desc">Public library serving Monkton and surrounding communities.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Monkton</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://monktonlibrary.org" target="_blank" rel="noopener">monktonlibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">The Makery at Hannaford Career Center</h3>
+        <p class="resource-card-desc">Community makerspace with 3D printing, building trades tools, and sewing. Membership-based, open to all ages.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Middlebury</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://makeryatpahcc.org" target="_blank" rel="noopener">makeryatpahcc.org</a></div>
+        </div>
+      </div>
+
     </div>
-    <div class="resource-item">
-      <strong>Ilsley Public Library</strong> &mdash; 75 Main St, Middlebury, VT<br>
-      <a href="https://www.ilsleylibrary.org">ilsleylibrary.org</a>
-    </div>
-    <div class="resource-item">
-      <strong>UVM Extension — Addison County</strong> &mdash; Middlebury, VT<br>
-      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
-    </div>
-    <div class="resource-item">
-      <strong>Generator Makerspace</strong> &mdash; Burlington, VT (serves Addison County)<br>
-      <a href="https://generatorvt.com">generatorvt.com</a>
+    <div class="resource-also">
+      <p>Additional libraries in Addison County</p>
+      <ul>
+        <li>Orwell Free Library — Orwell</li>
+        <li>New Haven Community Library — New Haven</li>
+        <li>Cornwall Free Public Library — Cornwall</li>
+        <li>Salisbury Free Public Library — Salisbury</li>
+        <li>Lincoln Library — Lincoln</li>
+        <li>Starksboro Public Library — Starksboro</li>
+        <li>Hancock Free Public Library — Hancock</li>
+      </ul>
     </div>
   </div>
 
+  <!-- ===== BENNINGTON ===== -->
   <div class="resource-section" id="bennington">
-    <h2>Bennington County</h2>
-    <div class="resource-item">
-      <strong>Bennington Free Library</strong> &mdash; 101 Silver St, Bennington, VT<br>
-      <a href="https://www.benningtonfreelibrary.org">benningtonfreelibrary.org</a>
+    <h2>Bennington County — Libraries</h2>
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Bennington Free Library</h3>
+        <p class="resource-card-desc">The main public library for Bennington, offering books, digital resources, programming, and community meeting space for the region.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Bennington</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://benningtonfreelibrary.org" target="_blank" rel="noopener">benningtonfreelibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Martha Canfield Memorial Free Library</h3>
+        <p class="resource-card-desc">Public library serving Arlington and surrounding communities in southwestern Vermont.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Arlington</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://marthacanfieldlibrary.org" target="_blank" rel="noopener">marthacanfieldlibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Manchester Community Library</h3>
+        <p class="resource-card-desc">Public library serving Manchester and the surrounding communities with collections, programs, and community space.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Manchester</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://mclvt.org" target="_blank" rel="noopener">mclvt.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">John G. McCullough Free Library</h3>
+        <p class="resource-card-desc">Public library serving North Bennington and the surrounding community.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> North Bennington</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://mcculloughlibrary.org" target="_blank" rel="noopener">mcculloughlibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Dorset Village Public Library</h3>
+        <p class="resource-card-desc">Public library serving Dorset and surrounding communities in the Green Mountain foothills.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Dorset</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://dorsetvillagelibrary.org" target="_blank" rel="noopener">dorsetvillagelibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">Bennington Area Makers (BAM)</h3>
+        <p class="resource-card-desc">Community makerspace with 3D printers, computers, sewing, and robotics equipment, open to makers of all skill levels.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Bennington</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://bamvt.com" target="_blank" rel="noopener">bamvt.com</a></div>
+        </div>
+      </div>
+
     </div>
-    <div class="resource-item">
-      <strong>Martha Canfield Library</strong> &mdash; Russell Sage Highway, Arlington, VT<br>
-      <a href="https://marthacanfieldlibrary.org">marthacanfieldlibrary.org</a>
-    </div>
-    <div class="resource-item">
-      <strong>UVM Extension — Bennington County</strong> &mdash; Bennington, VT<br>
-      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
-    </div>
-    <div class="resource-item">
-      <strong>Southern Vermont Arts Center</strong> &mdash; 930 SVAC Dr, Manchester, VT (hosts workshops)<br>
-      <a href="https://svac.org">svac.org</a>
+    <div class="resource-also">
+      <p>Additional libraries in Bennington County</p>
+      <ul>
+        <li>Winhall Memorial Library — Bondville</li>
+        <li>Solomon Wright Public Library — Pownal</li>
+        <li>Readsboro Community Library — Readsboro</li>
+        <li>Stamford Community Library — Stamford</li>
+      </ul>
     </div>
   </div>
 
+  <!-- ===== CALEDONIA ===== -->
   <div class="resource-section" id="caledonia">
-    <h2>Caledonia County</h2>
-    <div class="resource-item">
-      <strong>Fairbanks Museum &amp; Planetarium</strong> &mdash; 1302 Main St, St. Johnsbury, VT (STEM programs)<br>
-      <a href="https://fairbanksmuseum.org">fairbanksmuseum.org</a>
+    <h2>Caledonia County — Libraries</h2>
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">St. Johnsbury Athenaeum</h3>
+        <p class="resource-card-desc">A National Historic Landmark housing a public library and a Victorian-era art gallery — one of the oldest unaltered art galleries in the United States. Serving the community since 1871.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> St. Johnsbury</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://stjathenaeum.org" target="_blank" rel="noopener">stjathenaeum.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Jeudevine Memorial Library</h3>
+        <p class="resource-card-desc">Public library serving Hardwick and surrounding communities in the heart of the Northeast Kingdom.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Hardwick</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://jeudevinememoriallibrary.org" target="_blank" rel="noopener">jeudevinememoriallibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Cobleigh Public Library</h3>
+        <p class="resource-card-desc">Public library serving Lyndonville and the surrounding community.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Lyndonville</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://cobleighlibrary.org" target="_blank" rel="noopener">cobleighlibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Peacham Library</h3>
+        <p class="resource-card-desc">Public library serving Peacham and surrounding communities in rural Caledonia County.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Peacham</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://peachamlibrary.org" target="_blank" rel="noopener">peachamlibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--stem">STEM / Museum</span>
+        <h3 class="resource-card-name">Fairbanks Museum &amp; Planetarium</h3>
+        <p class="resource-card-desc">Natural history museum, science center, and public planetarium with ongoing STEM programs for schools and the public. A regional hub for science education in the Northeast Kingdom.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> St. Johnsbury</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://fairbanksmuseum.org" target="_blank" rel="noopener">fairbanksmuseum.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">The Foundry</h3>
+        <p class="resource-card-desc">10,000 sq ft community makerspace with 3D printing, CNC, laser cutting, and fabrication tools — a major resource for rural Northeast Kingdom makers.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Lyndonville</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://thefoundryvt.org" target="_blank" rel="noopener">thefoundryvt.org</a></div>
+        </div>
+      </div>
+
     </div>
-    <div class="resource-item">
-      <strong>St. Johnsbury Athenaeum</strong> &mdash; 1171 Main St, St. Johnsbury, VT<br>
-      <a href="https://www.stjathenaeum.org">stjathenaeum.org</a>
-    </div>
-    <div class="resource-item">
-      <strong>UVM Extension — Caledonia County</strong> &mdash; St. Johnsbury, VT<br>
-      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
-    </div>
-    <div class="resource-item">
-      <strong>Northeastern Vermont Regional Hospital Community Programs</strong> &mdash; St. Johnsbury, VT<br>
-      <a href="https://www.nvrh.org">nvrh.org</a>
+    <div class="resource-also">
+      <p>Additional libraries in Caledonia County</p>
+      <ul>
+        <li>Barnet Public Library — Barnet</li>
+        <li>Groton Free Public Library — Groton</li>
+        <li>Pope Memorial Library — Danville</li>
+        <li>Davies Memorial Library — Lower Waterford</li>
+        <li>East Burke Community Library — East Burke</li>
+      </ul>
     </div>
   </div>
 
+  <!-- ===== CHITTENDEN ===== -->
   <div class="resource-section" id="chittenden">
-    <h2>Chittenden County</h2>
-    <div class="resource-item">
-      <strong>Generator Makerspace</strong> &mdash; 40 Sears Ln, Burlington, VT (Vermont's largest makerspace)<br>
-      <a href="https://generatorvt.com">generatorvt.com</a>
+    <h2>Chittenden County — Libraries</h2>
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Fletcher Free Library</h3>
+        <p class="resource-card-desc">Burlington's central public library, offering extensive collections, digital resources, community programs, and open meeting space for the city and region.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> 235 College St, Burlington</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://fletcherfree.org" target="_blank" rel="noopener">fletcherfree.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Brownell Library</h3>
+        <p class="resource-card-desc">Public library serving Essex Junction and surrounding communities with books, programs, and digital resources.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Essex Junction</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://brownelllibrary.org" target="_blank" rel="noopener">brownelllibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Deborah Rawson Memorial Library</h3>
+        <p class="resource-card-desc">Public library serving Jericho and surrounding communities.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Jericho</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://drml.org" target="_blank" rel="noopener">drml.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Carpenter-Carse Library</h3>
+        <p class="resource-card-desc">Public library serving Hinesburg and surrounding communities.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Hinesburg</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://carpentercarse.org" target="_blank" rel="noopener">carpentercarse.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Pierson Library</h3>
+        <p class="resource-card-desc">Public library serving Shelburne and surrounding communities south of Burlington.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Shelburne</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://piersonlibrary.org" target="_blank" rel="noopener">piersonlibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">South Burlington Community Library</h3>
+        <p class="resource-card-desc">Public library serving South Burlington with collections, digital access, and community programming.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> South Burlington</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://southburlingtonlibrary.org" target="_blank" rel="noopener">southburlingtonlibrary.org</a></div>
+        </div>
+      </div>
+
     </div>
-    <div class="resource-item">
-      <strong>Fletcher Free Library</strong> &mdash; 235 College St, Burlington, VT<br>
-      <a href="https://www.fletcherfree.org">fletcherfree.org</a>
-    </div>
-    <div class="resource-item">
-      <strong>University of Vermont — Innovation Hub</strong> &mdash; Burlington, VT<br>
-      <a href="https://www.uvm.edu">uvm.edu</a>
-    </div>
-    <div class="resource-item">
-      <strong>Champlain College — Emergent Media Center</strong> &mdash; Burlington, VT<br>
-      <a href="https://www.champlain.edu/emc">champlain.edu/emc</a>
-    </div>
-    <div class="resource-item">
-      <strong>Vermont Technology Alliance</strong> &mdash; Burlington, VT<br>
-      <a href="https://www.vermonttechnology.com">vermonttechnology.com</a>
+    <div class="resource-also">
+      <p>Additional libraries in Chittenden County</p>
+      <ul>
+        <li>Dorothy Alling Memorial Library — Williston</li>
+        <li>Burnham Memorial Library — Colchester</li>
+        <li>Milton Public Library — Milton</li>
+        <li>Winooski Memorial Library — Winooski</li>
+        <li>Richmond Free Library — Richmond</li>
+        <li>Charlotte Library — Charlotte</li>
+        <li>Huntington Public Library — Huntington</li>
+        <li>Westford Town Library — Westford</li>
+        <li>Jericho Town Library — Jericho Center</li>
+      </ul>
     </div>
   </div>
 
+  <!-- ===== ESSEX ===== -->
   <div class="resource-section" id="essex">
-    <h2>Essex County</h2>
-    <div class="resource-item">
-      <strong>North Country Library</strong> &mdash; Island Pond, VT<br>
-      <a href="https://libraries.vermont.gov">libraries.vermont.gov</a>
+    <h2>Essex County — Libraries</h2>
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Island Pond Public Library</h3>
+        <p class="resource-card-desc">Public library serving Island Pond and surrounding communities in Vermont's most rural county.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Island Pond</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://islandpondpubliclibrary.com" target="_blank" rel="noopener">islandpondpubliclibrary.com</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Alice M. Ward Memorial Library</h3>
+        <p class="resource-card-desc">Public library serving Canaan and surrounding communities near the Connecticut River and Canadian border.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Canaan</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://aliceward.org" target="_blank" rel="noopener">aliceward.org</a></div>
+        </div>
+      </div>
+
     </div>
-    <div class="resource-item">
-      <strong>UVM Extension — Essex County</strong> &mdash; St. Johnsbury (serves Essex County)<br>
-      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
-    </div>
-    <div class="resource-item">
-      <strong>Kingdom Community Wind / NEK Energy Coalition</strong> &mdash; Northeast Kingdom renewable energy community organizing<br>
-      <a href="https://nekedc.com">nekedc.com</a>
+    <div class="resource-also">
+      <p>Additional libraries in Essex County</p>
+      <ul>
+        <li>Concord Public Library — Concord</li>
+        <li>Alden Balch Memorial Library — Lunenburg</li>
+        <li>Guildhall Public Library — Guildhall</li>
+      </ul>
     </div>
   </div>
 
+  <!-- ===== FRANKLIN ===== -->
   <div class="resource-section" id="franklin">
-    <h2>Franklin County</h2>
-    <div class="resource-item">
-      <strong>St. Albans Free Library</strong> &mdash; 11 Maiden Ln, St. Albans, VT<br>
-      <a href="https://www.stalbansfreelibrary.org">stalbansfreelibrary.org</a>
+    <h2>Franklin County — Libraries</h2>
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">St. Albans Free Library</h3>
+        <p class="resource-card-desc">The main public library for Franklin County, serving St. Albans and the broader region with collections, digital resources, and community programs.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> St. Albans</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://stalbansfreelibrary.org" target="_blank" rel="noopener">stalbansfreelibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Enosburgh Public Library</h3>
+        <p class="resource-card-desc">Public library serving Enosburg Falls and surrounding communities in northern Vermont.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Enosburg Falls</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://enosburghlibrary.net" target="_blank" rel="noopener">enosburghlibrary.net</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Fairfax Community Library</h3>
+        <p class="resource-card-desc">Public library serving Fairfax and surrounding communities.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Fairfax</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://fairfaxvtlibrary.org" target="_blank" rel="noopener">fairfaxvtlibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Bent Northrop Memorial Library</h3>
+        <p class="resource-card-desc">Public library serving Fairfield and surrounding communities.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Fairfield</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://bentnorthrop.org" target="_blank" rel="noopener">bentnorthrop.org</a></div>
+        </div>
+      </div>
+
     </div>
-    <div class="resource-item">
-      <strong>Northwestern Vermont Community Action</strong> &mdash; St. Albans, VT<br>
-      <a href="https://nwvca.org">nwvca.org</a>
-    </div>
-    <div class="resource-item">
-      <strong>UVM Extension — Franklin &amp; Grand Isle Counties</strong> &mdash; St. Albans, VT<br>
-      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    <div class="resource-also">
+      <p>Additional libraries in Franklin County</p>
+      <ul>
+        <li>Arvin A. Brown Public Library — Richford</li>
+        <li>Haston Library — Franklin</li>
+        <li>Highgate Public Library — Highgate Center</li>
+        <li>Sheldon Municipal Library — Sheldon</li>
+        <li>Montgomery Town Library — Montgomery Center</li>
+        <li>H. F. Brigham Free Public Library — Bakersfield</li>
+        <li>Swanton Public Library — Swanton</li>
+      </ul>
     </div>
   </div>
 
+  <!-- ===== GRAND ISLE ===== -->
   <div class="resource-section" id="grand-isle">
-    <h2>Grand Isle County</h2>
-    <div class="resource-item">
-      <strong>Folsom Educational &amp; Community Center Library</strong> &mdash; South Hero, VT<br>
-      <a href="https://libraries.vermont.gov">libraries.vermont.gov</a>
-    </div>
-    <div class="resource-item">
-      <strong>UVM Extension — Franklin &amp; Grand Isle Counties</strong> &mdash; St. Albans, VT<br>
-      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
-    </div>
-    <div class="resource-item">
-      <strong>Lake Champlain Islands Chamber of Commerce</strong> &mdash; South Hero, VT<br>
-      <a href="https://champlainislands.com">champlainislands.com</a>
+    <h2>Grand Isle County — Libraries</h2>
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">South Hero Community Library (Worthen Library)</h3>
+        <p class="resource-card-desc">Public library serving South Hero and the Lake Champlain Islands community.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> South Hero</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://worthenlibrary.org" target="_blank" rel="noopener">worthenlibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Grand Isle Free Library</h3>
+        <p class="resource-card-desc">Public library serving Grand Isle and surrounding Lake Champlain Islands communities.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Grand Isle</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://grandislefreelibrary.org" target="_blank" rel="noopener">grandislefreelibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Alburg Public Library</h3>
+        <p class="resource-card-desc">Public library serving Alburg, Vermont's northernmost community, on a peninsula extending into Lake Champlain.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Alburg</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://alburghpl.org" target="_blank" rel="noopener">alburghpl.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">North Hero Public Library</h3>
+        <p class="resource-card-desc">Public library serving North Hero Island on Lake Champlain.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> North Hero</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://libraries.vermont.gov" target="_blank" rel="noopener">libraries.vermont.gov</a></div>
+        </div>
+      </div>
+
     </div>
   </div>
 
+  <!-- ===== LAMOILLE ===== -->
   <div class="resource-section" id="lamoille">
-    <h2>Lamoille County</h2>
-    <div class="resource-item">
-      <strong>Morristown Centennial Library</strong> &mdash; 88 Lower Main St, Morrisville, VT<br>
-      <a href="https://morristownlibrary.org">morristownlibrary.org</a>
+    <h2>Lamoille County — Libraries</h2>
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Morristown Centennial Library</h3>
+        <p class="resource-card-desc">The main public library for Lamoille County, serving Morrisville and the surrounding region with collections, digital resources, and community programs.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Morrisville</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://centenniallibrary.org" target="_blank" rel="noopener">centenniallibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Stowe Free Library</h3>
+        <p class="resource-card-desc">Public library serving Stowe and surrounding communities, offering collections, digital access, and year-round programming.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Stowe</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://stowelibrary.org" target="_blank" rel="noopener">stowelibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Johnson Public Library</h3>
+        <p class="resource-card-desc">Public library serving Johnson and surrounding communities in Lamoille County.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Johnson</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://johnsonpubliclibrary.org" target="_blank" rel="noopener">johnsonpubliclibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Varnum Memorial Library</h3>
+        <p class="resource-card-desc">Public library serving Jeffersonville and the communities of Cambridge and environs.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Jeffersonville</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://varnumlibrary.org" target="_blank" rel="noopener">varnumlibrary.org</a></div>
+        </div>
+      </div>
+
     </div>
-    <div class="resource-item">
-      <strong>Sterling College</strong> &mdash; Craftsbury Common, VT (sustainability-focused programs)<br>
-      <a href="https://sterlingcollege.edu">sterlingcollege.edu</a>
-    </div>
-    <div class="resource-item">
-      <strong>UVM Extension — Lamoille County</strong> &mdash; Morrisville, VT<br>
-      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    <div class="resource-also">
+      <p>Additional libraries in Lamoille County</p>
+      <ul>
+        <li>Lanpher Memorial Library — Hyde Park</li>
+        <li>Waterville Town Library — Waterville</li>
+      </ul>
     </div>
   </div>
 
+  <!-- ===== ORANGE ===== -->
   <div class="resource-section" id="orange">
-    <h2>Orange County</h2>
-    <div class="resource-item">
-      <strong>Royalton Memorial Library</strong> &mdash; S. Royalton, VT<br>
-      <a href="https://libraries.vermont.gov">libraries.vermont.gov</a>
+    <h2>Orange County — Libraries</h2>
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Kimball Public Library</h3>
+        <p class="resource-card-desc">The main public library for Orange County, serving Randolph and the surrounding region with collections, digital resources, and community programming.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Randolph</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://kimballlibrary.org" target="_blank" rel="noopener">kimballlibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Blake Memorial Library</h3>
+        <p class="resource-card-desc">Public library serving East Corinth and the surrounding Upper Connecticut River Valley communities.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> East Corinth</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://blakememorial.org" target="_blank" rel="noopener">blakememorial.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Morrill Memorial and Harris Library</h3>
+        <p class="resource-card-desc">Public library serving Strafford and surrounding communities.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Strafford</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://straffordlibrary.org" target="_blank" rel="noopener">straffordlibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Tenney Memorial Library</h3>
+        <p class="resource-card-desc">Public library serving Newbury and surrounding communities along the Connecticut River.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Newbury</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://tenneymemoriallibrary.org" target="_blank" rel="noopener">tenneymemoriallibrary.org</a></div>
+        </div>
+      </div>
+
     </div>
-    <div class="resource-item">
-      <strong>Vermont Law and Graduate School</strong> &mdash; 164 Chelsea St, South Royalton, VT<br>
-      <a href="https://www.vermontlaw.edu">vermontlaw.edu</a>
-    </div>
-    <div class="resource-item">
-      <strong>UVM Extension — Orange County</strong> &mdash; Randolph, VT<br>
-      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
-    </div>
-    <div class="resource-item">
-      <strong>Vermont Technical College</strong> &mdash; 124 Admin Dr, Randolph Center, VT<br>
-      <a href="https://www.vtc.edu">vtc.edu</a>
+    <div class="resource-also">
+      <p>Additional libraries in Orange County</p>
+      <ul>
+        <li>Bradford Public Library — Bradford</li>
+        <li>Latham Memorial Library — Thetford</li>
+        <li>Fairlee Public Library — Fairlee</li>
+        <li>Chelsea Public Library — Chelsea</li>
+        <li>Tunbridge Public Library — Tunbridge</li>
+        <li>Brookfield Free Public Library — Brookfield</li>
+        <li>Vershire Community Library — Vershire</li>
+      </ul>
     </div>
   </div>
 
+  <!-- ===== ORLEANS ===== -->
   <div class="resource-section" id="orleans">
-    <h2>Orleans County</h2>
-    <div class="resource-item">
-      <strong>Derby Public Library</strong> &mdash; Derby, VT<br>
-      <a href="https://libraries.vermont.gov">libraries.vermont.gov</a>
+    <h2>Orleans County — Libraries</h2>
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Goodrich Memorial Library</h3>
+        <p class="resource-card-desc">The main public library for Orleans County, serving Newport and the surrounding region with books, digital resources, and community programs.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Newport</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://goodrichlibrary.org" target="_blank" rel="noopener">goodrichlibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Haskell Free Library and Opera House</h3>
+        <p class="resource-card-desc">A unique binational library and opera house straddling the US-Canada border, with the reading room in Vermont and the stage in Quebec. Serving Derby Line and Stanstead since 1904.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Derby Line</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://haskelloperahouse.org" target="_blank" rel="noopener">haskelloperahouse.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Craftsbury Public Library</h3>
+        <p class="resource-card-desc">Public library serving Craftsbury Common and surrounding communities in the Northeast Kingdom.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Craftsbury Common</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://craftsburypubliclibrary.org" target="_blank" rel="noopener">craftsburypubliclibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Greensboro Free Library</h3>
+        <p class="resource-card-desc">Public library serving Greensboro and surrounding communities. Home county of the Spark makerspace (WonderArts).</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Greensboro</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://greensborofreelibrary.org" target="_blank" rel="noopener">greensborofreelibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">Newport Community Maker Space</h3>
+        <p class="resource-card-desc">Makerspace, tool library, and business incubator serving Newport and the broader Northeast Kingdom region.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Newport</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://ncmsvt.org" target="_blank" rel="noopener">ncmsvt.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">Spark (WonderArts / Rural Arts VT)</h3>
+        <p class="resource-card-desc">Rural arts makerspace with graphic design computers, 3D printers, and laser cutter. Part of the WonderArts initiative bringing creative tools to the Northeast Kingdom.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Greensboro</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://ruralartsvt.org" target="_blank" rel="noopener">ruralartsvt.org</a></div>
+        </div>
+      </div>
+
     </div>
-    <div class="resource-item">
-      <strong>UVM Extension — Orleans County</strong> &mdash; Newport, VT<br>
-      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
-    </div>
-    <div class="resource-item">
-      <strong>NEK Council on Aging</strong> &mdash; Newport, VT (technology access programs)<br>
-      <a href="https://nekcouncil.org">nekcouncil.org</a>
+    <div class="resource-also">
+      <p>Additional libraries in Orleans County</p>
+      <ul>
+        <li>Barton Public Library — Barton</li>
+        <li>Glover Public Library — Glover</li>
+        <li>Leach Public Library — Irasburg</li>
+        <li>Albany Town Library — Albany</li>
+        <li>Jones Memorial Library — Orleans</li>
+        <li>William and Lucy Rand Memorial Library — North Troy</li>
+        <li>Lowell Community Library — Lowell</li>
+      </ul>
     </div>
   </div>
 
+  <!-- ===== RUTLAND ===== -->
   <div class="resource-section" id="rutland">
-    <h2>Rutland County</h2>
-    <div class="resource-item">
-      <strong>Rutland Free Library</strong> &mdash; 10 Court St, Rutland, VT<br>
-      <a href="https://rutlandfree.org">rutlandfree.org</a>
+    <h2>Rutland County — Libraries</h2>
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Rutland Free Library</h3>
+        <p class="resource-card-desc">The main public library for Rutland County, offering extensive collections, digital resources, programming, and community meeting space in downtown Rutland.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> 10 Court St, Rutland</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://rutlandfree.org" target="_blank" rel="noopener">rutlandfree.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Brandon Free Public Library</h3>
+        <p class="resource-card-desc">Public library serving Brandon and surrounding communities in central Rutland County.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Brandon</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://brandonfreelibrary.org" target="_blank" rel="noopener">brandonfreelibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Maclure Library</h3>
+        <p class="resource-card-desc">Public library serving Pittsford and surrounding communities.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Pittsford</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://maclurelibrary.org" target="_blank" rel="noopener">maclurelibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Castleton Free Library</h3>
+        <p class="resource-card-desc">Public library serving Castleton and surrounding communities in western Rutland County.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Castleton</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://castletonfreelibrary.org" target="_blank" rel="noopener">castletonfreelibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Fair Haven Free Library</h3>
+        <p class="resource-card-desc">Public library serving Fair Haven and surrounding communities near the New York border.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Fair Haven</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://fairhavenfree.org" target="_blank" rel="noopener">fairhavenfree.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">The MINT</h3>
+        <p class="resource-card-desc">Community makerspace with laser cutter, wood shop, jewelry lab, metal shop, and stained glass studio. Membership and day passes available.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Rutland</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://rutlandmint.org" target="_blank" rel="noopener">rutlandmint.org</a></div>
+        </div>
+      </div>
+
     </div>
-    <div class="resource-item">
-      <strong>Vermont Makers</strong> &mdash; Rutland area community making network<br>
-      <a href="https://vermontmakers.org">vermontmakers.org</a>
-    </div>
-    <div class="resource-item">
-      <strong>College of St. Joseph / Community College of Vermont — Rutland</strong> &mdash; Rutland, VT<br>
-      <a href="https://ccv.edu">ccv.edu</a>
-    </div>
-    <div class="resource-item">
-      <strong>UVM Extension — Rutland County</strong> &mdash; Rutland, VT<br>
-      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    <div class="resource-also">
+      <p>Additional libraries in Rutland County</p>
+      <ul>
+        <li>Poultney Public Library — Poultney</li>
+        <li>Mount Holly Town Library — Mount Holly</li>
+        <li>Sherburne Memorial Library — Killington</li>
+        <li>Shrewsbury Library — Shrewsbury</li>
+        <li>Middletown Springs Public Library — Middletown Springs</li>
+        <li>West Rutland Free Library — West Rutland</li>
+        <li>Wells Village Library — Wells</li>
+        <li>Gilbert Hart Library — Wallingford</li>
+        <li>Pawlet Public Library — Pawlet</li>
+        <li>Proctor Free Library — Proctor</li>
+        <li>Silas L. Griffith Memorial Library — Danby</li>
+      </ul>
     </div>
   </div>
 
+  <!-- ===== WASHINGTON ===== -->
   <div class="resource-section" id="washington">
-    <h2>Washington County</h2>
-    <div class="resource-item">
-      <strong>Kellogg-Hubbard Library</strong> &mdash; 135 Main St, Montpelier, VT<br>
-      <a href="https://www.kellogghubbard.org">kellogghubbard.org</a>
+    <h2>Washington County — Libraries</h2>
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Kellogg-Hubbard Library</h3>
+        <p class="resource-card-desc">Montpelier's public library, serving Vermont's capital city and the surrounding region with collections, community programs, and meeting spaces.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> 135 Main St, Montpelier</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://kellogghubbard.org" target="_blank" rel="noopener">kellogghubbard.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Aldrich Public Library</h3>
+        <p class="resource-card-desc">Public library serving Barre and surrounding communities in Washington County.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Barre</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://aldrichpubliclibrary.org" target="_blank" rel="noopener">aldrichpubliclibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Waterbury Public Library</h3>
+        <p class="resource-card-desc">Public library serving Waterbury and surrounding communities.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Waterbury</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://waterburypubliclibrary.com" target="_blank" rel="noopener">waterburypubliclibrary.com</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Brown Public Library</h3>
+        <p class="resource-card-desc">Public library serving Northfield and surrounding communities.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Northfield</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://brownpubliclibrary.org" target="_blank" rel="noopener">brownpubliclibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Joslin Memorial Library</h3>
+        <p class="resource-card-desc">Public library serving Waitsfield and the Mad River Valley communities.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Waitsfield</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://joslinmemoriallibrary.com" target="_blank" rel="noopener">joslinmemoriallibrary.com</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">MakerSphere</h3>
+        <p class="resource-card-desc">Makerspace and arts studio with clay, ceramics, woodworking, stained glass, and cooking facilities. Classes and open studio time available.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Waterbury Center</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://makerspherevt.com" target="_blank" rel="noopener">makerspherevt.com</a></div>
+        </div>
+      </div>
+
     </div>
-    <div class="resource-item">
-      <strong>Capital City Makerspace</strong> &mdash; Montpelier, VT<br>
-      <a href="https://www.capitalcitymakerspace.com">capitalcitymakerspace.com</a>
-    </div>
-    <div class="resource-item">
-      <strong>Vermont Agency of Digital Services</strong> &mdash; Montpelier, VT (state open data &amp; tech policy)<br>
-      <a href="https://digitalservices.vermont.gov">digitalservices.vermont.gov</a>
-    </div>
-    <div class="resource-item">
-      <strong>Vermont Open Source Alliance</strong> &mdash; Montpelier, VT<br>
-      <a href="https://vtosa.org">vtosa.org</a>
-    </div>
-    <div class="resource-item">
-      <strong>UVM Extension — Washington County</strong> &mdash; Montpelier, VT<br>
-      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    <div class="resource-also">
+      <p>Additional libraries in Washington County</p>
+      <ul>
+        <li>Jaquith Public Library — Marshfield</li>
+        <li>Cabot Public Library — Cabot</li>
+        <li>Cutler Memorial Library — Plainfield</li>
+        <li>Moretown Memorial Library — Moretown</li>
+        <li>Warren Public Library — Warren</li>
+        <li>Woodbury Community Library — Woodbury</li>
+        <li>Calef Memorial Library — Washington</li>
+        <li>Roxbury Free Library — Roxbury</li>
+        <li>Ainsworth Public Library — Williamstown</li>
+      </ul>
     </div>
   </div>
 
+  <!-- ===== WINDHAM ===== -->
   <div class="resource-section" id="windham">
-    <h2>Windham County</h2>
-    <div class="resource-item">
-      <strong>Brooks Memorial Library</strong> &mdash; 224 Main St, Brattleboro, VT<br>
-      <a href="https://brookslibraryvt.org">brookslibraryvt.org</a>
+    <h2>Windham County — Libraries</h2>
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Brooks Memorial Library</h3>
+        <p class="resource-card-desc">Brattleboro's main public library, serving Windham County with collections, digital resources, community programming, and open meeting space.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> 224 Main St, Brattleboro</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://brookslibraryvt.org" target="_blank" rel="noopener">brookslibraryvt.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Rockingham Free Public Library</h3>
+        <p class="resource-card-desc">Public library serving Bellows Falls and the town of Rockingham in the Connecticut River Valley.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Bellows Falls</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://rockinghamlibrary.org" target="_blank" rel="noopener">rockinghamlibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Moore Free Library</h3>
+        <p class="resource-card-desc">Public library serving Newfane and the Windham County shire town community.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Newfane</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://moorefreelibrary.org" target="_blank" rel="noopener">moorefreelibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Putney Public Library</h3>
+        <p class="resource-card-desc">Public library serving Putney and surrounding communities north of Brattleboro.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Putney</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://putneylibrary.org" target="_blank" rel="noopener">putneylibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Pettee Memorial Library</h3>
+        <p class="resource-card-desc">Public library serving Wilmington and surrounding communities in southern Windham County.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Wilmington</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://petteelibrary.org" target="_blank" rel="noopener">petteelibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">HatchSpace</h3>
+        <p class="resource-card-desc">Woodworking school and community workshop with CNC, laser cutting, and 3D printing alongside traditional hand tools. Classes and membership available.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Brattleboro</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://hatchspace.org" target="_blank" rel="noopener">hatchspace.org</a></div>
+        </div>
+      </div>
+
     </div>
-    <div class="resource-item">
-      <strong>Windham &amp; Windsor Housing Trust</strong> &mdash; Brattleboro, VT<br>
-      <a href="https://www.wwhtrust.org">wwhrust.org</a>
-    </div>
-    <div class="resource-item">
-      <strong>Brattleboro Development Credit Corporation</strong> &mdash; Brattleboro, VT (small business &amp; tech)<br>
-      <a href="https://bdcc.com">bdcc.com</a>
-    </div>
-    <div class="resource-item">
-      <strong>UVM Extension — Windham County</strong> &mdash; Brattleboro, VT<br>
-      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    <div class="resource-also">
+      <p>Additional libraries in Windham County</p>
+      <ul>
+        <li>Grafton Public Library — Grafton</li>
+        <li>Jamaica Free Public Library — Jamaica</li>
+        <li>Guilford Free Library — Guilford</li>
+        <li>Vernon Free Library — Vernon</li>
+        <li>Townshend Public Library — Townshend</li>
+        <li>Butterfield Library — Westminster</li>
+        <li>South Londonderry Free Library — South Londonderry</li>
+        <li>Wardsboro Free Public Library — Wardsboro</li>
+        <li>Dover Free Library — East Dover</li>
+        <li>Windham Town Library — Windham</li>
+      </ul>
     </div>
   </div>
 
+  <!-- ===== WINDSOR ===== -->
   <div class="resource-section" id="windsor">
-    <h2>Windsor County</h2>
-    <div class="resource-item">
-      <strong>Windsor Public Library</strong> &mdash; 43 State St, Windsor, VT<br>
-      <a href="https://www.windsorvtlibrary.org">windsorvtlibrary.org</a>
+    <h2>Windsor County — Libraries</h2>
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Norman Williams Public Library</h3>
+        <p class="resource-card-desc">A well-regarded independent public library in Woodstock, known for a strong collection, community programming, and a beautiful historic building in the heart of the village.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Woodstock</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://normanwilliams.org" target="_blank" rel="noopener">normanwilliams.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Springfield Town Library</h3>
+        <p class="resource-card-desc">Public library serving Springfield and the surrounding Connecticut River Valley communities.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Springfield</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://springfieldtownlibrary.org" target="_blank" rel="noopener">springfieldtownlibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Norwich Public Library</h3>
+        <p class="resource-card-desc">Public library serving Norwich and the Upper Valley, just across the river from Hanover, NH.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Norwich</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://norwichlibrary.org" target="_blank" rel="noopener">norwichlibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Windsor Public Library</h3>
+        <p class="resource-card-desc">Public library serving Windsor and surrounding communities in the Connecticut River Valley.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Windsor</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://windsorlibrary.org" target="_blank" rel="noopener">windsorlibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Hartford Library</h3>
+        <p class="resource-card-desc">Public library serving White River Junction and the town of Hartford, a regional hub of the Upper Valley.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> White River Junction</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://hartfordvtlibrary.org" target="_blank" rel="noopener">hartfordvtlibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Whiting Library</h3>
+        <p class="resource-card-desc">Public library serving Chester and surrounding communities in central Windsor County.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Chester</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://whitinglibrary.org" target="_blank" rel="noopener">whitinglibrary.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--library">Library</span>
+        <h3 class="resource-card-name">Fletcher Memorial Library</h3>
+        <p class="resource-card-desc">Public library serving Ludlow and the surrounding Okemo Valley communities.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> Ludlow</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://fmlnews.org" target="_blank" rel="noopener">fmlnews.org</a></div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <span class="resource-badge resource-badge--makerspace">Makerspace</span>
+        <h3 class="resource-card-name">Upper Valley MakerSpace</h3>
+        <p class="resource-card-desc">Makerspace, artist studio, and business incubator serving the Vermont-New Hampshire Upper Valley region. Equipment access and workspace for makers and small businesses.</p>
+        <div class="resource-card-meta">
+          <div class="resource-meta-row"><span class="meta-label">Location</span> White River Junction</div>
+          <div class="resource-meta-row"><span class="meta-label">Website</span> <a href="https://uppervalleymakerspace.org" target="_blank" rel="noopener">uppervalleymakerspace.org</a></div>
+        </div>
+      </div>
+
     </div>
-    <div class="resource-item">
-      <strong>Upper Valley Makerspace (UVMAKE)</strong> &mdash; White River Junction, VT<br>
-      <a href="https://uvmake.org">uvmake.org</a>
-    </div>
-    <div class="resource-item">
-      <strong>Vermont Center for Emerging Technologies</strong> &mdash; White River Junction, VT<br>
-      <a href="https://vcet.co">vcet.co</a>
-    </div>
-    <div class="resource-item">
-      <strong>UVM Extension — Windsor County</strong> &mdash; White River Junction, VT<br>
-      <a href="https://www.uvm.edu/extension">uvm.edu/extension</a>
+    <div class="resource-also">
+      <p>Additional libraries in Windsor County</p>
+      <ul>
+        <li>Cavendish Fletcher Community Library — Proctorsville</li>
+        <li>Bethel Public Library — Bethel</li>
+        <li>Royalton Memorial Library — South Royalton</li>
+        <li>Weathersfield Proctor Library — Weathersfield</li>
+        <li>Rochester Public Library — Rochester</li>
+        <li>Baxter Memorial Library — Sharon</li>
+        <li>Abbott Memorial Library — South Pomfret</li>
+        <li>Charles B. Danforth Library — Barnard</li>
+        <li>Mary L. Blood Memorial Library — Brownsville</li>
+        <li>Quechee Library — Quechee</li>
+        <li>Hartland Public Library — Hartland</li>
+      </ul>
     </div>
   </div>
 
   <hr class="divider">
 
   <!-- ===== OPEN SOURCE TOPICS ===== -->
-  <div class="resource-section">
+  <div class="resource-section" id="open-source">
     <h2>Open Source Topics</h2>
 
     <h3>Open Source Licensing</h3>
     <ul class="resource-links">
-      <li><a href="https://opensource.org/licenses">opensource.org/licenses</a></li>
-      <li><a href="https://choosealicense.com">choosealicense.com</a></li>
-      <li><a href="https://www.gnu.org/licenses/licenses.html">gnu.org — Licenses</a></li>
-      <li><a href="https://tldrlegal.com">tldrlegal.com</a></li>
+      <li><a href="https://opensource.org/licenses" target="_blank" rel="noopener">opensource.org/licenses</a></li>
+      <li><a href="https://choosealicense.com" target="_blank" rel="noopener">choosealicense.com</a></li>
+      <li><a href="https://www.gnu.org/licenses/licenses.html" target="_blank" rel="noopener">gnu.org — Licenses</a></li>
+      <li><a href="https://tldrlegal.com" target="_blank" rel="noopener">tldrlegal.com</a></li>
     </ul>
 
     <h3>Right to Repair</h3>
     <ul class="resource-links">
-      <li><a href="https://www.ifixit.com/Right-to-Repair">iFixit — Right to Repair</a></li>
-      <li><a href="https://repair.org">repair.org</a></li>
-      <li><a href="https://www.eff.org/issues/right-to-repair">EFF — Right to Repair</a></li>
-      <li><a href="https://www.farmersrighttorepair.com">farmersrighttorepair.com</a></li>
+      <li><a href="https://www.ifixit.com/Right-to-Repair" target="_blank" rel="noopener">iFixit — Right to Repair</a></li>
+      <li><a href="https://repair.org" target="_blank" rel="noopener">repair.org</a></li>
+      <li><a href="https://www.eff.org/issues/right-to-repair" target="_blank" rel="noopener">EFF — Right to Repair</a></li>
+      <li><a href="https://www.farmersrighttorepair.com" target="_blank" rel="noopener">farmersrighttorepair.com</a></li>
     </ul>
 
     <h3>Open Source Practices</h3>
     <ul class="resource-links">
-      <li><a href="https://opensource.guide">opensource.guide</a></li>
-      <li><a href="https://www.linuxfoundation.org">Linux Foundation</a></li>
-      <li><a href="https://www.apache.org/foundation/how-it-works.html">Apache Foundation</a></li>
-      <li><a href="https://www.redhat.com/en/open-source">Red Hat Open Source</a></li>
+      <li><a href="https://opensource.guide" target="_blank" rel="noopener">opensource.guide</a></li>
+      <li><a href="https://www.linuxfoundation.org" target="_blank" rel="noopener">Linux Foundation</a></li>
+      <li><a href="https://www.apache.org/foundation/how-it-works.html" target="_blank" rel="noopener">Apache Foundation</a></li>
     </ul>
 
     <h3>Open Data &amp; Civic Tech</h3>
     <ul class="resource-links">
-      <li><a href="https://geodata.vermont.gov">Vermont Open Geodata</a></li>
-      <li><a href="https://data.vermont.gov">data.vermont.gov</a></li>
-      <li><a href="https://codeforamerica.org">Code for America</a></li>
-      <li><a href="https://github.com/VERSO-UVM">VERSO-UVM GitHub</a></li>
+      <li><a href="https://geodata.vermont.gov" target="_blank" rel="noopener">Vermont Open Geodata</a></li>
+      <li><a href="https://data.vermont.gov" target="_blank" rel="noopener">data.vermont.gov</a></li>
+      <li><a href="https://codeforamerica.org" target="_blank" rel="noopener">Code for America</a></li>
+      <li><a href="https://github.com/VERSO-UVM" target="_blank" rel="noopener">VERSO-UVM GitHub</a></li>
     </ul>
   </div>
 
@@ -366,6 +1278,63 @@
   <span class="footer-brand">Open Vermont</span>
   Community-driven open source for Vermont &mdash; <a href="https://github.com/VERSO-UVM/Open-Vermont">GitHub</a>
 </footer>
+
+<script>
+  const filterBtns   = document.querySelectorAll('.filter-btn');
+  const searchInput  = document.getElementById('resource-search');
+  const countEl      = document.getElementById('filter-count');
+  const allCards     = Array.from(document.querySelectorAll('.resource-card'));
+  const allSections  = Array.from(document.querySelectorAll('.resource-section'));
+
+  function cardType(card) {
+    if (card.querySelector('.resource-badge--library'))    return 'library';
+    if (card.querySelector('.resource-badge--makerspace,  .resource-badge--hackerspace, .resource-badge--fablab')) return 'makerspace';
+    return 'other';
+  }
+
+  function applyFilters() {
+    const activeType = document.querySelector('.filter-btn.active').dataset.filter;
+    const term       = searchInput.value.toLowerCase().trim();
+
+    let visible = 0;
+
+    allCards.forEach(card => {
+      const typeMatch   = activeType === 'all' || cardType(card) === activeType;
+      const searchMatch = !term || card.textContent.toLowerCase().includes(term);
+      const show        = typeMatch && searchMatch;
+      card.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+
+    // Show/hide "also" compact lists
+    document.querySelectorAll('.resource-also').forEach(box => {
+      // Hide compact lists when filtering by makerspace, or when searching
+      const hide = activeType === 'makerspace' || term;
+      box.classList.toggle('hidden', !!hide);
+    });
+
+    // Hide sections that have no visible cards
+    allSections.forEach(section => {
+      if (section.id === 'open-source') return;
+      const hasVisible = section.querySelector('.resource-card:not(.hidden)');
+      section.classList.toggle('hidden', !hasVisible);
+    });
+
+    // Update count
+    const total = allCards.length;
+    countEl.textContent = visible < total ? `${visible} of ${total} shown` : '';
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    });
+  });
+
+  searchInput.addEventListener('input', applyFilters);
+</script>
 
 </body>
 </html>

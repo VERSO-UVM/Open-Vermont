@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:wiki.hackerspaces.org)",
+      "WebFetch(domain:librarytechnology.org)",
+      "WebFetch(domain:vermontmakers.org)"
+    ]
+  }
+}
