@@ -35,16 +35,24 @@
   <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px; flex-wrap:wrap; gap:12px;">
     <div>
       <div class="section-title">Open Opportunities</div>
-      <div class="section-subtitle">3 active opportunities — sorted by community interest</div>
+      <div class="section-subtitle" id="opportunity-count">3 active opportunities — sorted by community interest</div>
     </div>
     <a href="https://github.com/VERSO-UVM/Open-Vermont/issues/new?template=opportunity.md&title=Opportunity%3A+&labels=opportunity" class="btn btn-primary">+ Submit Opportunity</a>
   </div>
 
   <div class="notice">
-    <strong>About opportunities.</strong> Each entry identifies a community challenge and the existing resources — organizations, tools, funding, and people — available to address it. Voting helps the community signal where collaborative effort could have the most impact. These are starting points for local action, not policy positions.
+    <strong>About opportunities.</strong> Each entry identifies a community challenge and the existing resources — organizations, tools, funding, and people — available to address it. Vote by clicking "👍 React on GitHub" — you'll need a free GitHub account. Votes are tallied from GitHub reactions and update automatically. These are starting points for local action, not policy positions.
   </div>
 
-  <div class="problem">
+  <!--
+    SETUP: For each .problem card below, set data-issue to the GitHub issue number
+    you created for that opportunity (e.g. data-issue="3").
+    Create issues at: https://github.com/VERSO-UVM/Open-Vermont/issues/new
+    Add the label "opportunity" to each one.
+    Until issue numbers are set, the page shows static fallback counts.
+  -->
+
+  <div class="problem" data-issue="1">
     <span class="tag">Infrastructure</span>
     <span class="tag">Rural</span>
     <h2>Improve Rural Internet Access</h2>
@@ -52,13 +60,13 @@
     <p>Many rural areas in Vermont lack reliable internet connectivity, impacting education, telehealth, and small business.</p>
     <p class="meta-label" style="margin-top:10px;">Available Resources</p>
     <p>State broadband grants, local ISPs, community volunteers, federal BEAD program funding.</p>
-    <a href="#" class="vote-link">&#9650; Upvote &nbsp;&middot;&nbsp; 23 votes</a>
+    <a href="#" class="vote-link" target="_blank" rel="noopener">&#128077; React on GitHub &nbsp;&middot;&nbsp; <span class="vote-count">23 votes</span></a>
     <div class="vote-bar-wrap" style="margin-top:14px;">
-      <div class="vote-bar" style="width:100%;">100%</div>
+      <div class="vote-bar" style="width:100%;"><span class="vote-pct">100%</span></div>
     </div>
   </div>
 
-  <div class="problem">
+  <div class="problem" data-issue="2">
     <span class="tag">Housing</span>
     <span class="tag">Economy</span>
     <h2>Affordable Housing Solutions</h2>
@@ -66,13 +74,13 @@
     <p>Housing costs are rising, making it increasingly difficult for working families to remain in Vermont.</p>
     <p class="meta-label" style="margin-top:10px;">Available Resources</p>
     <p>Non-profit organizations, Vermont Housing Finance Agency, government programs, local builders.</p>
-    <a href="#" class="vote-link">&#9650; Upvote &nbsp;&middot;&nbsp; 15 votes</a>
+    <a href="#" class="vote-link" target="_blank" rel="noopener">&#128077; React on GitHub &nbsp;&middot;&nbsp; <span class="vote-count">15 votes</span></a>
     <div class="vote-bar-wrap" style="margin-top:14px;">
-      <div class="vote-bar" style="width:65%;">65%</div>
+      <div class="vote-bar" style="width:65%;"><span class="vote-pct">65%</span></div>
     </div>
   </div>
 
-  <div class="problem">
+  <div class="problem" data-issue="3">
     <span class="tag">Makerspaces</span>
     <span class="tag">Education</span>
     <h2>Expand Makerspaces in Rural Areas</h2>
@@ -80,9 +88,9 @@
     <p>Rural communities lack access to collaborative maker environments for hands-on innovation and skill-building.</p>
     <p class="meta-label" style="margin-top:10px;">Available Resources</p>
     <p>Local schools, public libraries, community centers, state innovation grants.</p>
-    <a href="#" class="vote-link">&#9650; Upvote &nbsp;&middot;&nbsp; 8 votes</a>
+    <a href="#" class="vote-link" target="_blank" rel="noopener">&#128077; React on GitHub &nbsp;&middot;&nbsp; <span class="vote-count">8 votes</span></a>
     <div class="vote-bar-wrap" style="margin-top:14px;">
-      <div class="vote-bar" style="width:34%;">34%</div>
+      <div class="vote-bar" style="width:34%;"><span class="vote-pct">34%</span></div>
     </div>
   </div>
 
@@ -92,6 +100,64 @@
   <span class="footer-brand">Open Vermont</span>
   Community-driven open source for Vermont &mdash; <a href="https://github.com/VERSO-UVM/Open-Vermont">GitHub</a>
 </footer>
+
+<script>
+  const REPO = 'VERSO-UVM/Open-Vermont';
+
+  async function loadVotes() {
+    const cards = Array.from(document.querySelectorAll('.problem[data-issue]'))
+      .filter(c => parseInt(c.dataset.issue) > 0);
+
+    if (cards.length === 0) return; // all placeholders, keep static display
+
+    const issueNums = cards.map(c => c.dataset.issue);
+
+    // Fetch each issue individually (simple, within unauthenticated rate limit for small counts)
+    const results = await Promise.allSettled(
+      issueNums.map(num =>
+        fetch(`https://api.github.com/repos/${REPO}/issues/${num}`, {
+          headers: { Accept: 'application/vnd.github+json' }
+        }).then(r => r.ok ? r.json() : null)
+      )
+    );
+
+    // Build vote map: issue number → thumbs-up count
+    const voteMap = {};
+    results.forEach((result, i) => {
+      if (result.status === 'fulfilled' && result.value) {
+        voteMap[issueNums[i]] = result.value.reactions?.['+1'] ?? 0;
+        cards[i].querySelector('.vote-link').href = result.value.html_url;
+      }
+    });
+
+    // Calculate max for relative bar widths
+    const counts = Object.values(voteMap);
+    const max = Math.max(...counts, 1);
+
+    cards.forEach(card => {
+      const num = card.dataset.issue;
+      if (!(num in voteMap)) return;
+
+      const votes = voteMap[num];
+      const pct = Math.max(Math.round((votes / max) * 100), 2); // min 2% so bar is visible
+
+      card.querySelector('.vote-count').textContent =
+        votes === 1 ? '1 vote' : `${votes} votes`;
+
+      const bar = card.querySelector('.vote-bar');
+      bar.style.width = pct + '%';
+      card.querySelector('.vote-pct').textContent = pct + '%';
+    });
+
+    // Re-sort cards by vote count, highest first
+    const container = document.querySelector('.container');
+    cards
+      .sort((a, b) => (voteMap[b.dataset.issue] ?? 0) - (voteMap[a.dataset.issue] ?? 0))
+      .forEach(card => container.appendChild(card));
+  }
+
+  loadVotes().catch(() => {}); // silently fall back to static on any error
+</script>
 
 </body>
 </html>
