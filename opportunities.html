@@ -60,7 +60,10 @@
     <p>Many rural areas in Vermont lack reliable internet connectivity, impacting education, telehealth, and small business.</p>
     <p class="meta-label" style="margin-top:10px;">Available Resources</p>
     <p>State broadband grants, local ISPs, community volunteers, federal BEAD program funding.</p>
-    <a href="#" class="vote-link" target="_blank" rel="noopener">&#128077; React on GitHub &nbsp;&middot;&nbsp; <span class="vote-count">23 votes</span></a>
+    <div class="card-actions">
+      <a href="#" class="vote-link" target="_blank" rel="noopener">&#128077; React on GitHub &nbsp;&middot;&nbsp; <span class="vote-count">23 votes</span></a>
+      <a href="#" class="comment-link" target="_blank" rel="noopener">&#128172; <span class="comment-count">0 comments</span></a>
+    </div>
     <div class="vote-bar-wrap" style="margin-top:14px;">
       <div class="vote-bar" style="width:100%;"><span class="vote-pct">100%</span></div>
     </div>
@@ -74,7 +77,10 @@
     <p>Housing costs are rising, making it increasingly difficult for working families to remain in Vermont.</p>
     <p class="meta-label" style="margin-top:10px;">Available Resources</p>
     <p>Non-profit organizations, Vermont Housing Finance Agency, government programs, local builders.</p>
-    <a href="#" class="vote-link" target="_blank" rel="noopener">&#128077; React on GitHub &nbsp;&middot;&nbsp; <span class="vote-count">15 votes</span></a>
+    <div class="card-actions">
+      <a href="#" class="vote-link" target="_blank" rel="noopener">&#128077; React on GitHub &nbsp;&middot;&nbsp; <span class="vote-count">15 votes</span></a>
+      <a href="#" class="comment-link" target="_blank" rel="noopener">&#128172; <span class="comment-count">0 comments</span></a>
+    </div>
     <div class="vote-bar-wrap" style="margin-top:14px;">
       <div class="vote-bar" style="width:65%;"><span class="vote-pct">65%</span></div>
     </div>
@@ -88,7 +94,10 @@
     <p>Rural communities lack access to collaborative maker environments for hands-on innovation and skill-building.</p>
     <p class="meta-label" style="margin-top:10px;">Available Resources</p>
     <p>Local schools, public libraries, community centers, state innovation grants.</p>
-    <a href="#" class="vote-link" target="_blank" rel="noopener">&#128077; React on GitHub &nbsp;&middot;&nbsp; <span class="vote-count">8 votes</span></a>
+    <div class="card-actions">
+      <a href="#" class="vote-link" target="_blank" rel="noopener">&#128077; React on GitHub &nbsp;&middot;&nbsp; <span class="vote-count">8 votes</span></a>
+      <a href="#" class="comment-link" target="_blank" rel="noopener">&#128172; <span class="comment-count">0 comments</span></a>
+    </div>
     <div class="vote-bar-wrap" style="margin-top:14px;">
       <div class="vote-bar" style="width:34%;"><span class="vote-pct">34%</span></div>
     </div>
@@ -121,29 +130,46 @@
       )
     );
 
-    // Build vote map: issue number → thumbs-up count
-    const voteMap = {};
+    // Build issue data map: issue number → { votes, comments, url }
+    const issueData = {};
     results.forEach((result, i) => {
       if (result.status === 'fulfilled' && result.value) {
-        voteMap[issueNums[i]] = result.value.reactions?.['+1'] ?? 0;
-        cards[i].querySelector('.vote-link').href = result.value.html_url;
+        const issue = result.value;
+        issueData[issueNums[i]] = {
+          votes:    issue.reactions?.['+1'] ?? 0,
+          comments: issue.comments ?? 0,
+          url:      issue.html_url
+        };
       }
     });
 
-    // Calculate max for relative bar widths
-    const counts = Object.values(voteMap);
-    const max = Math.max(...counts, 1);
+    // Calculate max votes for relative bar widths
+    const max = Math.max(...Object.values(issueData).map(d => d.votes), 1);
 
     cards.forEach(card => {
       const num = card.dataset.issue;
-      if (!(num in voteMap)) return;
+      if (!(num in issueData)) return;
 
-      const votes = voteMap[num];
-      const pct = Math.max(Math.round((votes / max) * 100), 2); // min 2% so bar is visible
+      const { votes, comments, url } = issueData[num];
+      const pct = Math.max(Math.round((votes / max) * 100), 2);
 
-      card.querySelector('.vote-count').textContent =
-        votes === 1 ? '1 vote' : `${votes} votes`;
+      // Vote count + link
+      const voteLink = card.querySelector('.vote-link');
+      if (voteLink) {
+        voteLink.href = url;
+        card.querySelector('.vote-count').textContent =
+          votes === 1 ? '1 vote' : `${votes} votes`;
+      }
 
+      // Comment count + link
+      const commentLink = card.querySelector('.comment-link');
+      if (commentLink) {
+        commentLink.href = url;
+        card.querySelector('.comment-count').textContent =
+          comments === 1 ? '1 comment' : `${comments} comments`;
+      }
+
+      // Vote bar
       const bar = card.querySelector('.vote-bar');
       bar.style.width = pct + '%';
       card.querySelector('.vote-pct').textContent = pct + '%';
@@ -152,7 +178,7 @@
     // Re-sort cards by vote count, highest first
     const container = document.querySelector('.container');
     cards
-      .sort((a, b) => (voteMap[b.dataset.issue] ?? 0) - (voteMap[a.dataset.issue] ?? 0))
+      .sort((a, b) => (issueData[b.dataset.issue]?.votes ?? 0) - (issueData[a.dataset.issue]?.votes ?? 0))
       .forEach(card => container.appendChild(card));
   }
 
